@@ -73,6 +73,7 @@
             this.катерToolStripMenuItem.Name = "катерToolStripMenuItem";
             this.катерToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.катерToolStripMenuItem.Text = "Шлюпка";
+            this.катерToolStripMenuItem.Click += new System.EventHandler(this.катерToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -88,12 +89,14 @@
             this.горизонтальныйToolStripMenuItem.Name = "горизонтальныйToolStripMenuItem";
             this.горизонтальныйToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.горизонтальныйToolStripMenuItem.Text = "Горизонтальный";
+            this.горизонтальныйToolStripMenuItem.Click += new System.EventHandler(this.горизонтальныйToolStripMenuItem_Click);
             // 
             // вертикальныйToolStripMenuItem
             // 
             this.вертикальныйToolStripMenuItem.Name = "вертикальныйToolStripMenuItem";
             this.вертикальныйToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.вертикальныйToolStripMenuItem.Text = "Вертикальный";
+            this.вертикальныйToolStripMenuItem.Click += new System.EventHandler(this.вертикальныйToolStripMenuItem_Click);
             // 
             // крейсерToolStripMenuItem
             // 
@@ -109,12 +112,14 @@
             this.горизонтальныйToolStripMenuItem1.Name = "горизонтальныйToolStripMenuItem1";
             this.горизонтальныйToolStripMenuItem1.Size = new System.Drawing.Size(167, 22);
             this.горизонтальныйToolStripMenuItem1.Text = "Горизонтальный";
+            this.горизонтальныйToolStripMenuItem1.Click += new System.EventHandler(this.горизонтальныйToolStripMenuItem1_Click);
             // 
             // вертикальныйToolStripMenuItem1
             // 
             this.вертикальныйToolStripMenuItem1.Name = "вертикальныйToolStripMenuItem1";
             this.вертикальныйToolStripMenuItem1.Size = new System.Drawing.Size(167, 22);
             this.вертикальныйToolStripMenuItem1.Text = "Вертикальный";
+            this.вертикальныйToolStripMenuItem1.Click += new System.EventHandler(this.вертикальныйToolStripMenuItem1_Click);
             // 
             // авианосецToolStripMenuItem
             // 
@@ -130,12 +135,14 @@
             this.горизонтальныйToolStripMenuItem2.Name = "горизонтальныйToolStripMenuItem2";
             this.горизонтальныйToolStripMenuItem2.Size = new System.Drawing.Size(167, 22);
             this.горизонтальныйToolStripMenuItem2.Text = "Горизонтальный";
+            this.горизонтальныйToolStripMenuItem2.Click += new System.EventHandler(this.горизонтальныйToolStripMenuItem2_Click);
             // 
             // вертикальныйToolStripMenuItem2
             // 
             this.вертикальныйToolStripMenuItem2.Name = "вертикальныйToolStripMenuItem2";
             this.вертикальныйToolStripMenuItem2.Size = new System.Drawing.Size(167, 22);
             this.вертикальныйToolStripMenuItem2.Text = "Вертикальный";
+            this.вертикальныйToolStripMenuItem2.Click += new System.EventHandler(this.вертикальныйToolStripMenuItem2_Click);
             // 
             // User2Form
             // 

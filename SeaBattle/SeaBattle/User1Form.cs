@@ -89,5 +89,40 @@ namespace SeaBattle
             form.Show();
             this.Close();
         }
+
+        private void катерToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Functions.GetNum(11);
+        }
+
+        private void горизонтальныйToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Functions.GetNum(121);
+        }
+
+        private void вертикальныйToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Functions.GetNum(122);
+        }
+
+        private void горизонтальныйToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Functions.GetNum(131);
+        }
+
+        private void вертикальныйToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Functions.GetNum(132);
+        }
+
+        private void горизонтальныйToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Functions.GetNum(141);
+        }
+
+        private void вертикальныйToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Functions.GetNum(142);
+        }
     }
 }
