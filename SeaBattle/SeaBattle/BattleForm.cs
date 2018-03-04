@@ -79,6 +79,7 @@ namespace SeaBattle
                 }
                 x = 401; y += Data.CellWidth + 1;
             }
+            MessageBox.Show("Ход первого");
         }
 
         private void Label_MouseEnter(object sender, EventArgs e)
