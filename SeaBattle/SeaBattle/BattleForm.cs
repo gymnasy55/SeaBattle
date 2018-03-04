@@ -22,7 +22,7 @@ namespace SeaBattle
 
         private void BattleForm_Load(object sender, EventArgs e)
         {
-            this.Width = 1000; this.Height = 395;
+            this.Width = 752; this.Height = 395;
             int x = 13, y = 13;
             UserField1.cells = new Label[Data.FieldWidth, Data.FieldWidth];
             for (int i = 0; i < Data.FieldWidth; i++)
@@ -67,7 +67,7 @@ namespace SeaBattle
                     this.Controls.Add(UserField2.cells[i, j]);
                     x += Data.CellWidth + 1;
                 }
-                x = 13; y += Data.CellWidth + 1;
+                x = 401; y += Data.CellWidth + 1;
             }
         }
     }
