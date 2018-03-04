@@ -76,6 +76,7 @@ namespace SeaBattle
 
         private void btnNext_Click(object sender, EventArgs e)
         {
+            this.Controls.Clear();
             Form form = new BattleForm();
             form.Show();
             this.Close();

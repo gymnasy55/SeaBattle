@@ -34,7 +34,8 @@ namespace SeaBattle
                         Height = Data.CellWidth,
                         TextAlign = ContentAlignment.MiddleCenter,
                         BorderStyle = BorderStyle.FixedSingle,
-                        Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold)
+                        Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold),
+                        Name = ""
                     };
                     Fields.field1.cells[i, j].MouseEnter += new EventHandler(Label_MouseEnter);
                     Fields.field1.cells[i, j].MouseLeave += new EventHandler(Label_MouseLeave);
@@ -43,7 +44,7 @@ namespace SeaBattle
                     x += Data.CellWidth + 1;
                 }
                 x = 13;
-                y += Data.CellWidth + 1;
+                y += Data.CellWidth + 1;          
             }
         }
 
@@ -76,6 +77,7 @@ namespace SeaBattle
 
         private void btnNext_Click(object sender, EventArgs e)
         {
+            this.Controls.Clear();
             Form form = new User2Form();
             form.Show();
             this.Close();
