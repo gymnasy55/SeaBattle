@@ -15,7 +15,7 @@ namespace SeaBattle
     struct Field
     {
         public Label[,] cells { get; set; }
-    }
+    };
     
     class Fields
     {

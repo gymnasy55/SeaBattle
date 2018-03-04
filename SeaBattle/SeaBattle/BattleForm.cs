@@ -19,7 +19,13 @@ namespace SeaBattle
 
         private void BattleForm_Load(object sender, EventArgs e)
         {
-
+            for(int i = 0; i < Data.FieldWidth; i++)
+            {
+                for(int j = 0; j < 0; j++)
+                {
+                    this.Controls.Add(Fields.field1.cells[i, j]);
+                }
+            }
         }
     }
 }
