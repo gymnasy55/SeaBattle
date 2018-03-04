@@ -41,7 +41,8 @@ namespace SeaBattle
                         TextAlign = ContentAlignment.MiddleCenter,
                         Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold),
                         Name = Fields.field1.cells[i, j].Name,
-                        Text = ""
+                        Text = "",
+                        Enabled = false
                     };
                     UserField1.cells[i, j].MouseEnter += new EventHandler(Label_MouseEnter);
                     UserField1.cells[i, j].MouseLeave += new EventHandler(Label_MouseLeave);
@@ -67,8 +68,7 @@ namespace SeaBattle
                         TextAlign = ContentAlignment.MiddleCenter,
                         Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold),
                         Name = Fields.field2.cells[i, j].Name,
-                        Text = "",
-                        Enabled = false
+                        Text = ""
                     };
                     UserField2.cells[i, j].MouseEnter += new EventHandler(Label_MouseEnter);
                     UserField2.cells[i, j].MouseLeave += new EventHandler(Label_MouseLeave);
@@ -113,6 +113,7 @@ namespace SeaBattle
                             UserField1.cells[i, j].Enabled = true;
                         }
                     }
+                    User = false;
                     MessageBox.Show("Ход второго");
                 }
                 else
@@ -125,6 +126,7 @@ namespace SeaBattle
                             UserField1.cells[i, j].Enabled = false;
                         }
                     }
+                    User = true;
                     MessageBox.Show("Ход первого");
                 }
             }
