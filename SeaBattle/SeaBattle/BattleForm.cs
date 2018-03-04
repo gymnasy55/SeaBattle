@@ -19,8 +19,8 @@ namespace SeaBattle
 
         Field UserField1 = new Field();
         Field UserField2 = new Field();
-
         bool User = true; //true - User1; false - User2
+
         private void BattleForm_Load(object sender, EventArgs e)
         {
             this.Width = 752; this.Height = 395;
