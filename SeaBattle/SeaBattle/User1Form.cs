@@ -17,18 +17,16 @@ namespace SeaBattle
             InitializeComponent();
         }
 
-        Field1 field = new Field1();
-
         private void User1_Load(object sender, EventArgs e)
         {
             this.Width = 351; this.Height = 395;
-            field.cells = new Label[Data.FieldWidth, Data.FieldWidth];
+            Fields.field1.cells = new Label[Data.FieldWidth, Data.FieldWidth];
             int x = 13, y = 42;
             for(int i = 0; i < Data.FieldWidth; i++)
             {
                 for(int j = 0; j < Data.FieldWidth; j++)
                 {
-                    field.cells[i, j] = new Label
+                    Fields.field1.cells[i, j] = new Label
                     {
                         Top = y,
                         Left = x,
@@ -38,10 +36,10 @@ namespace SeaBattle
                         BorderStyle = BorderStyle.FixedSingle,
                         Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold)
                     };
-                    field.cells[i, j].MouseEnter += new EventHandler(Label_MouseEnter);
-                    field.cells[i, j].MouseLeave += new EventHandler(Label_MouseLeave);
-                    field.cells[i, j].MouseClick += Label_MouseClick;
-                    this.Controls.Add(field.cells[i, j]);
+                    Fields.field1.cells[i, j].MouseEnter += new EventHandler(Label_MouseEnter);
+                    Fields.field1.cells[i, j].MouseLeave += new EventHandler(Label_MouseLeave);
+                    Fields.field1.cells[i, j].MouseClick += Label_MouseClick;
+                    this.Controls.Add(Fields.field1.cells[i, j]);
                     x += Data.CellWidth + 1;
                 }
                 x = 13;

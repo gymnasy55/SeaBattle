@@ -12,15 +12,16 @@ namespace SeaBattle
         public static int CellWidth { get; set; }
     }
 
-    public struct Field1
+    struct Field
     {
         public Label[,] cells { get; set; }
-    };
-
-    public struct Field2
+    }
+    
+    class Fields
     {
-        public Label[,] cells { get; set; }
-    };
+        public static Field field1 = new Field();
+        public static Field field2 = new Field();
+    }
 
     static class Program
     {

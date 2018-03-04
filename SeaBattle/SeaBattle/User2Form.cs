@@ -17,18 +17,16 @@ namespace SeaBattle
             InitializeComponent();
         }
 
-        Field2 field = new Field2();
-
         private void User2_Load(object sender, EventArgs e)
         {
             this.Width = 351; this.Height = 395;
-            field.cells = new Label[Data.FieldWidth, Data.FieldWidth];
+            Fields.field2.cells = new Label[Data.FieldWidth, Data.FieldWidth];
             int x = 13, y = 42;
             for (int i = 0; i < Data.FieldWidth; i++)
             {
                 for (int j = 0; j < Data.FieldWidth; j++)
                 {
-                    field.cells[i, j] = new Label
+                    Fields.field2.cells[i, j] = new Label
                     {
                         Top = y,
                         Left = x,
@@ -38,10 +36,10 @@ namespace SeaBattle
                         BorderStyle = BorderStyle.FixedSingle,
                         Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold)
                     };
-                    field.cells[i, j].MouseEnter += new EventHandler(Label_MouseEnter);
-                    field.cells[i, j].MouseLeave += new EventHandler(Label_MouseLeave);
-                    field.cells[i, j].MouseClick += Label_MouseClick;
-                    this.Controls.Add(field.cells[i, j]);
+                    Fields.field2.cells[i, j].MouseEnter += new EventHandler(Label_MouseEnter);
+                    Fields.field2.cells[i, j].MouseLeave += new EventHandler(Label_MouseLeave);
+                    Fields.field2.cells[i, j].MouseClick += Label_MouseClick;
+                    this.Controls.Add(Fields.field2.cells[i, j]);
                     x += Data.CellWidth + 1;
                 }
                 x = 13;
@@ -78,7 +76,7 @@ namespace SeaBattle
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            Form form = new User2Form();
+            Form form = new BattleForm();
             form.Show();
             this.Close();
         }
