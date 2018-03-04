@@ -20,11 +20,12 @@ namespace SeaBattle
         Field UserField1 = new Field();
         Field UserField2 = new Field();
         bool User = true; //true - User1; false - User2
+        int count1 = 0, count2 = 0;
+        bool isWin = false;
 
         private void BattleForm_Load(object sender, EventArgs e)
         {
             this.Width = 752; this.Height = 395;
-
             int x = 13, y = 13;
             UserField1.cells = new Label[Data.FieldWidth, Data.FieldWidth];
             for (int i = 0; i < Data.FieldWidth; i++)
@@ -94,6 +95,11 @@ namespace SeaBattle
             label.BorderStyle = BorderStyle.FixedSingle;
         }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void User_Click(object sender, EventArgs e)
         {
             Label cell = (Label)sender;
@@ -101,6 +107,14 @@ namespace SeaBattle
             {
                 cell.Text = "X";
                 cell.ForeColor = Color.Red;
+                if(User) { count2++; } else { count1++; }
+                if(count1 == Fields.field1.Count) { isWin = true; MessageBox.Show("Второй выиграл!!!"); }
+                else if (count2 == Fields.field2.Count) { isWin = true; MessageBox.Show("Первый выиграл!!!"); }
+                if(isWin)
+                {
+                    foreach(var item in UserField1.cells) { item.Enabled = false; }
+                    foreach (var item in UserField2.cells) { item.Enabled = false; }
+                }
             }
             else
             {

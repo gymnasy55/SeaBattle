@@ -76,6 +76,13 @@ namespace SeaBattle
 
         private void btnNext_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < Data.FieldWidth; i++)
+            {
+                for (int j = 0; j < Data.FieldWidth; j++)
+                {
+                    if (Fields.field2.cells[i, j].Name == "X") { Fields.field2.Count++; }
+                }
+            }
             this.Controls.Clear();
             Form form = new BattleForm();
             form.Show();

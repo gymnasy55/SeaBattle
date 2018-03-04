@@ -15,6 +15,7 @@ namespace SeaBattle
     struct Field
     {
         public Label[,] cells { get; set; }
+        public int Count { get; set; }
     };
     
     class Fields

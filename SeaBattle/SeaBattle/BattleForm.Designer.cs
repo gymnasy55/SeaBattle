@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.lblUser = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblUser
@@ -44,11 +45,23 @@
             this.lblUser.TabIndex = 0;
             this.lblUser.Text = "Ход: Первый";
             // 
+            // btnClose
+            // 
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnClose.Location = new System.Drawing.Point(320, 27);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(77, 23);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.Text = "Закрыть";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // BattleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 356);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblUser);
             this.Name = "BattleForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -62,5 +75,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Button btnClose;
     }
 }
