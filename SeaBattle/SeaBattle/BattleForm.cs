@@ -79,7 +79,7 @@ namespace SeaBattle
                 }
                 x = 401; y += Data.CellWidth + 1;
             }
-            MessageBox.Show("Ход первого");
+            lblUser.Text = "Ход: Первый";
         }
 
         private void Label_MouseEnter(object sender, EventArgs e)
@@ -117,7 +117,7 @@ namespace SeaBattle
                         }
                     }
                     User = false;
-                    MessageBox.Show("Ход второго");
+                    lblUser.Text = "Ход: Второй";
                 }
                 else
                 {
@@ -130,7 +130,7 @@ namespace SeaBattle
                         }
                     }
                     User = true;
-                    MessageBox.Show("Ход первого");
+                    lblUser.Text = "Ход: Первый";
                 }
             }
         }
