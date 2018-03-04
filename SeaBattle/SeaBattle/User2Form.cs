@@ -19,7 +19,7 @@ namespace SeaBattle
 
         private void User2_Load(object sender, EventArgs e)
         {
-            this.Width = 351; this.Height = 395;
+            this.Width = 351; this.Height = 420;
             Fields.field2.cells = new Label[Data.FieldWidth, Data.FieldWidth];
             int x = 13, y = 42;
             for (int i = 0; i < Data.FieldWidth; i++)

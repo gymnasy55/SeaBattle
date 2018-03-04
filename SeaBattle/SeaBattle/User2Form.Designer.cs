@@ -29,36 +29,145 @@
         private void InitializeComponent()
         {
             this.btnNext = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.катерToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.горизонтальныйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вертикальныйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.крейсерToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.горизонтальныйToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.вертикальныйToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.авианосецToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.горизонтальныйToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.вертикальныйToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnNext
             // 
-            this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNext.Location = new System.Drawing.Point(13, 13);
+            this.btnNext.Location = new System.Drawing.Point(12, 356);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(342, 23);
+            this.btnNext.Size = new System.Drawing.Size(310, 23);
             this.btnNext.TabIndex = 0;
             this.btnNext.Text = "Next >>>";
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.катерToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.крейсерToolStripMenuItem,
+            this.авианосецToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(335, 24);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // катерToolStripMenuItem
+            // 
+            this.катерToolStripMenuItem.Name = "катерToolStripMenuItem";
+            this.катерToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.катерToolStripMenuItem.Text = "Шлюпка";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.горизонтальныйToolStripMenuItem,
+            this.вертикальныйToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(50, 20);
+            this.toolStripMenuItem1.Text = "Катер";
+            // 
+            // горизонтальныйToolStripMenuItem
+            // 
+            this.горизонтальныйToolStripMenuItem.Name = "горизонтальныйToolStripMenuItem";
+            this.горизонтальныйToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.горизонтальныйToolStripMenuItem.Text = "Горизонтальный";
+            // 
+            // вертикальныйToolStripMenuItem
+            // 
+            this.вертикальныйToolStripMenuItem.Name = "вертикальныйToolStripMenuItem";
+            this.вертикальныйToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.вертикальныйToolStripMenuItem.Text = "Вертикальный";
+            // 
+            // крейсерToolStripMenuItem
+            // 
+            this.крейсерToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.горизонтальныйToolStripMenuItem1,
+            this.вертикальныйToolStripMenuItem1});
+            this.крейсерToolStripMenuItem.Name = "крейсерToolStripMenuItem";
+            this.крейсерToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.крейсерToolStripMenuItem.Text = "Крейсер";
+            // 
+            // горизонтальныйToolStripMenuItem1
+            // 
+            this.горизонтальныйToolStripMenuItem1.Name = "горизонтальныйToolStripMenuItem1";
+            this.горизонтальныйToolStripMenuItem1.Size = new System.Drawing.Size(167, 22);
+            this.горизонтальныйToolStripMenuItem1.Text = "Горизонтальный";
+            // 
+            // вертикальныйToolStripMenuItem1
+            // 
+            this.вертикальныйToolStripMenuItem1.Name = "вертикальныйToolStripMenuItem1";
+            this.вертикальныйToolStripMenuItem1.Size = new System.Drawing.Size(167, 22);
+            this.вертикальныйToolStripMenuItem1.Text = "Вертикальный";
+            // 
+            // авианосецToolStripMenuItem
+            // 
+            this.авианосецToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.горизонтальныйToolStripMenuItem2,
+            this.вертикальныйToolStripMenuItem2});
+            this.авианосецToolStripMenuItem.Name = "авианосецToolStripMenuItem";
+            this.авианосецToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.авианосецToolStripMenuItem.Text = "Авианосец";
+            // 
+            // горизонтальныйToolStripMenuItem2
+            // 
+            this.горизонтальныйToolStripMenuItem2.Name = "горизонтальныйToolStripMenuItem2";
+            this.горизонтальныйToolStripMenuItem2.Size = new System.Drawing.Size(167, 22);
+            this.горизонтальныйToolStripMenuItem2.Text = "Горизонтальный";
+            // 
+            // вертикальныйToolStripMenuItem2
+            // 
+            this.вертикальныйToolStripMenuItem2.Name = "вертикальныйToolStripMenuItem2";
+            this.вертикальныйToolStripMenuItem2.Size = new System.Drawing.Size(167, 22);
+            this.вертикальныйToolStripMenuItem2.Text = "Вертикальный";
+            // 
             // User2Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 340);
+            this.ClientSize = new System.Drawing.Size(335, 381);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnNext);
             this.Name = "User2Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User2";
             this.Load += new System.EventHandler(this.User2_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem катерToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem горизонтальныйToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem вертикальныйToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem крейсерToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem горизонтальныйToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem вертикальныйToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem авианосецToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem горизонтальныйToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem вертикальныйToolStripMenuItem2;
     }
 }
