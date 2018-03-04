@@ -46,6 +46,7 @@ namespace SeaBattle
                     };
                     UserField1.cells[i, j].MouseEnter += new EventHandler(Label_MouseEnter);
                     UserField1.cells[i, j].MouseLeave += new EventHandler(Label_MouseLeave);
+                    UserField1.cells[i, j].MouseClick += User_Click;
                     this.Controls.Add(UserField1.cells[i, j]);
                     x += Data.CellWidth + 1;
                 }
@@ -103,6 +104,7 @@ namespace SeaBattle
             else
             {
                 cell.Text = "N";
+                cell.MouseClick -= User_Click;
                 if(User)
                 {
                     for(int i = 0; i < Data.FieldWidth; i++)
