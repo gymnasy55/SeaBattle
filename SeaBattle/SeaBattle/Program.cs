@@ -11,6 +11,7 @@ namespace SeaBattle
     {
         public static int FieldWidth { get; set; }
         public static int CellWidth { get; set; }
+        public static int Mode { get; set; }
     }
 
     public struct Field
@@ -25,58 +26,11 @@ namespace SeaBattle
         public static Field field2 = new Field();
     }
 
-    public class Functions
+    public static class Functions
     {
         public static void GetNum(int num)
         {
-            switch(num)
-            {
-                case 11:
-                    //code
-                    break;
-                case 121:
-                    //code
-                    break;
-                case 122:
-                    //code
-                    break;
-                case 131:
-                    //code
-                    break;
-                case 132:
-                    //code
-                    break;
-                case 141:
-                    //code
-                    break;
-                case 142:
-                    //code
-                    break;
-                case 21:
-                    //code
-                    break;
-                case 221:
-                    //code
-                    break;
-                case 222:
-                    //code
-                    break;
-                case 231:
-                    //code
-                    break;
-                case 232:
-                    //code
-                    break;
-                case 241:
-                    //code
-                    break;
-                case 242:
-                    //code
-                    break;
-                default:
-                    //все остальное
-                    break;
-            }
+            
         }
 
         public static void Message(string message)

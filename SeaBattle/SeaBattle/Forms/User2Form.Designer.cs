@@ -151,9 +151,10 @@
             this.ClientSize = new System.Drawing.Size(335, 381);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnNext);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "User2Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "User2";
+            this.Text = "Заполните поле";
             this.Load += new System.EventHandler(this.User2_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

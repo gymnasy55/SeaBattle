@@ -99,40 +99,19 @@ namespace SeaBattle
         }
 
         #region Передача корабля
-        private void катерToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Functions.GetNum(21);
-        }
+        private void катерToolStripMenuItem_Click(object sender, EventArgs e) => Data.Mode = 21;
 
-        private void горизонтальныйToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Functions.GetNum(221);
-        }
+        private void горизонтальныйToolStripMenuItem_Click(object sender, EventArgs e) => Data.Mode = 221;
 
-        private void вертикальныйToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Functions.GetNum(222);
-        }
+        private void вертикальныйToolStripMenuItem_Click(object sender, EventArgs e) => Data.Mode = 222;
 
-        private void горизонтальныйToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Functions.GetNum(231);
-        }
+        private void горизонтальныйToolStripMenuItem1_Click(object sender, EventArgs e) => Data.Mode = 231;
 
-        private void вертикальныйToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Functions.GetNum(232);
-        }
+        private void вертикальныйToolStripMenuItem1_Click(object sender, EventArgs e) => Data.Mode = 232;
 
-        private void горизонтальныйToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            Functions.GetNum(241);
-        }
+        private void горизонтальныйToolStripMenuItem2_Click(object sender, EventArgs e) => Data.Mode = 241;
 
-        private void вертикальныйToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            Functions.GetNum(242);
-        }
+        private void вертикальныйToolStripMenuItem2_Click(object sender, EventArgs e) => Data.Mode = 242;
         #endregion
     }
 }
