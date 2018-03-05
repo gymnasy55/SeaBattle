@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblUser = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.tmTime = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // lblUser
@@ -56,11 +59,30 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblTime.ForeColor = System.Drawing.Color.Red;
+            this.lblTime.Location = new System.Drawing.Point(344, 53);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(18, 18);
+            this.lblTime.TabIndex = 2;
+            this.lblTime.Text = "0";
+            // 
+            // tmTime
+            // 
+            this.tmTime.Enabled = true;
+            this.tmTime.Interval = 1000;
+            this.tmTime.Tick += new System.EventHandler(this.tmTime_Tick);
+            // 
             // BattleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 356);
+            this.Controls.Add(this.lblTime);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblUser);
             this.Name = "BattleForm";
@@ -76,5 +98,7 @@
 
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Timer tmTime;
     }
 }

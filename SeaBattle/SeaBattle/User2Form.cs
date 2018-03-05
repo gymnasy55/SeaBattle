@@ -26,7 +26,7 @@ namespace SeaBattle
             {
                 for (int j = 0; j < Data.FieldWidth; j++)
                 {
-                    Fields.field2.cells[i, j] = new Label
+                    Fields.field2.cells[i, j] = new Label()
                     {
                         Top = y,
                         Left = x,
@@ -89,6 +89,7 @@ namespace SeaBattle
             this.Close();
         }
 
+        #region Передача корабля
         private void катерToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Functions.GetNum(21);
@@ -123,5 +124,6 @@ namespace SeaBattle
         {
             Functions.GetNum(242);
         }
+        #endregion
     }
 }

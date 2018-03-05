@@ -22,6 +22,7 @@ namespace SeaBattle
         bool User = true; //true - User1; false - User2
         int count1 = 0, count2 = 0;
         bool isWin = false;
+        int time = 0;
 
         private void BattleForm_Load(object sender, EventArgs e)
         {
@@ -100,6 +101,12 @@ namespace SeaBattle
             Application.Exit();
         }
 
+        private void tmTime_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = time.ToString();
+            time++;
+        }
+
         private void User_Click(object sender, EventArgs e)
         {
             Label cell = (Label)sender;
@@ -108,9 +115,9 @@ namespace SeaBattle
                 cell.Text = "X";
                 cell.ForeColor = Color.Red;
                 if(User) { count2++; } else { count1++; }
-                if(count1 == Fields.field1.Count) { isWin = true; Functions.Message("Второй выиграл!!!"); }
-                else if (count2 == Fields.field2.Count) { isWin = true; Functions.Message("Первый выиграл!!!"); }
-                if(isWin)
+                if(count1 == Fields.field1.Count) { tmTime.Enabled = false; isWin = true; Functions.Message("Второй выиграл!!! Время игры: " + lblTime.Text + " секунд."); }
+                else if (count2 == Fields.field2.Count) { tmTime.Enabled = false; isWin = true; Functions.Message("Первый выиграл!!! Время игры: " + lblTime.Text + " секунд."); }
+                if (isWin)
                 {
                     foreach(var item in UserField1.cells) { item.Enabled = false; }
                     foreach (var item in UserField2.cells) { item.Enabled = false; }
@@ -123,27 +130,15 @@ namespace SeaBattle
                 cell.MouseClick -= User_Click;
                 if(User)
                 {
-                    for(int i = 0; i < Data.FieldWidth; i++)
-                    {
-                        for(int j = 0; j < Data.FieldWidth; j++)
-                        {
-                            UserField2.cells[i, j].Enabled = false;
-                            UserField1.cells[i, j].Enabled = true;
-                        }
-                    }
+                    foreach (var item in UserField2.cells) { item.Enabled = false; }
+                    foreach (var item in UserField1.cells) { item.Enabled = true; }
                     User = false;
                     lblUser.Text = "Ход: Второй";
                 }
                 else
                 {
-                    for (int i = 0; i < Data.FieldWidth; i++)
-                    {
-                        for (int j = 0; j < Data.FieldWidth; j++)
-                        {
-                            UserField2.cells[i, j].Enabled = true;
-                            UserField1.cells[i, j].Enabled = false;
-                        }
-                    }
+                    foreach (var item in UserField2.cells) { item.Enabled = true; }
+                    foreach (var item in UserField1.cells) { item.Enabled = false; }
                     User = true;
                     lblUser.Text = "Ход: Первый";
                 }
