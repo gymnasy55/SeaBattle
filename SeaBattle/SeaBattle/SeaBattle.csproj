@@ -45,42 +45,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BattleForm.cs">
+    <Compile Include="Forms\BattleForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BattleForm.Designer.cs">
+    <Compile Include="Forms\BattleForm.Designer.cs">
       <DependentUpon>BattleForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuForm.cs">
+    <Compile Include="Forms\MenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuForm.Designer.cs">
+    <Compile Include="Forms\MenuForm.Designer.cs">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShipsForm.cs">
+    <Compile Include="Forms\ShipsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ShipsForm.Designer.cs">
+    <Compile Include="Forms\ShipsForm.Designer.cs">
       <DependentUpon>ShipsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="User1Form.cs">
+    <Compile Include="Forms\User1Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User1Form.Designer.cs">
+    <Compile Include="Forms\User1Form.Designer.cs">
       <DependentUpon>User1Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="User2Form.cs">
+    <Compile Include="Forms\User2Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User2Form.Designer.cs">
+    <Compile Include="Forms\User2Form.Designer.cs">
       <DependentUpon>User2Form.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BattleForm.resx">
+    <EmbeddedResource Include="Forms\BattleForm.resx">
       <DependentUpon>BattleForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuForm.resx">
+    <EmbeddedResource Include="Forms\MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -93,13 +93,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ShipsForm.resx">
+    <EmbeddedResource Include="Forms\ShipsForm.resx">
       <DependentUpon>ShipsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User1Form.resx">
+    <EmbeddedResource Include="Forms\User1Form.resx">
       <DependentUpon>User1Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User2Form.resx">
+    <EmbeddedResource Include="Forms\User2Form.resx">
       <DependentUpon>User2Form.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
