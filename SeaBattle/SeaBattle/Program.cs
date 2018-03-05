@@ -77,6 +77,16 @@ namespace SeaBattle
                     break;
             }
         }
+
+        public static void Message(string message)
+        {
+            MessageBox.Show(message, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        public static void Error(string error)
+        {
+            MessageBox.Show(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 
     static class Program

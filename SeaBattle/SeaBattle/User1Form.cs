@@ -26,7 +26,7 @@ namespace SeaBattle
             {
                 for(int j = 0; j < Data.FieldWidth; j++)
                 {
-                    Fields.field1.cells[i, j] = new Label
+                    Fields.field1.cells[i, j] = new Label()
                     {
                         Top = y,
                         Left = x,
@@ -35,7 +35,8 @@ namespace SeaBattle
                         TextAlign = ContentAlignment.MiddleCenter,
                         BorderStyle = BorderStyle.FixedSingle,
                         Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold),
-                        Name = ""
+                        Name = "",
+                        Anchor = AnchorStyles.None
                     };
                     Fields.field1.cells[i, j].MouseEnter += new EventHandler(Label_MouseEnter);
                     Fields.field1.cells[i, j].MouseLeave += new EventHandler(Label_MouseLeave);
@@ -90,6 +91,7 @@ namespace SeaBattle
             this.Close();
         }
 
+        #region Передача корабля
         private void катерToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Functions.GetNum(11);
@@ -124,5 +126,6 @@ namespace SeaBattle
         {
             Functions.GetNum(142);
         }
+        #endregion
     }
 }

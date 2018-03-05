@@ -108,13 +108,14 @@ namespace SeaBattle
                 cell.Text = "X";
                 cell.ForeColor = Color.Red;
                 if(User) { count2++; } else { count1++; }
-                if(count1 == Fields.field1.Count) { isWin = true; MessageBox.Show("Второй выиграл!!!"); }
-                else if (count2 == Fields.field2.Count) { isWin = true; MessageBox.Show("Первый выиграл!!!"); }
+                if(count1 == Fields.field1.Count) { isWin = true; Functions.Message("Второй выиграл!!!"); }
+                else if (count2 == Fields.field2.Count) { isWin = true; Functions.Message("Первый выиграл!!!"); }
                 if(isWin)
                 {
                     foreach(var item in UserField1.cells) { item.Enabled = false; }
                     foreach (var item in UserField2.cells) { item.Enabled = false; }
                 }
+                cell.MouseClick -= User_Click;
             }
             else
             {
