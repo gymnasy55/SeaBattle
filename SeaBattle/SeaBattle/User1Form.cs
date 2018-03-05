@@ -85,10 +85,17 @@ namespace SeaBattle
                     if(Fields.field1.cells[i,j].Name == "X") { Fields.field1.Count++; }
                 }
             }
-            this.Controls.Clear();
-            Form form = new User2Form();
-            form.Show();
-            this.Close();
+            if(Fields.field1.Count == 0)
+            {
+                Functions.Error("Поле не может быть пустым!!!");
+            }
+            else
+            {
+                this.Controls.Clear();
+                Form form = new User2Form();
+                form.Show();
+                this.Close();
+            }
         }
 
         #region Передача корабля
