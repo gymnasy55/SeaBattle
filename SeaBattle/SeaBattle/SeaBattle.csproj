@@ -59,6 +59,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShipsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipsForm.Designer.cs">
+      <DependentUpon>ShipsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="User1Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,7 +91,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ShipsForm.resx">
+      <DependentUpon>ShipsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User1Form.resx">
       <DependentUpon>User1Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +114,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ships.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

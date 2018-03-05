@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace SeaBattle
 {
@@ -12,12 +13,12 @@ namespace SeaBattle
         public static int CellWidth { get; set; }
     }
 
-    struct Field
+    public struct Field
     {
-        public Label[,] cells { get; set; }
+        public  Label[,] cells { get; set; }
         public int Count { get; set; }
     };
-    
+
     class Fields
     {
         public static Field field1 = new Field();

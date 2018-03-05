@@ -29,27 +29,37 @@
         private void InitializeComponent()
         {
             this.btnStart = new System.Windows.Forms.Button();
+            this.btnShips = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnStart
             // 
-            this.btnStart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnStart.Location = new System.Drawing.Point(12, 12);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(328, 74);
+            this.btnStart.Size = new System.Drawing.Size(399, 95);
             this.btnStart.TabIndex = 0;
-            this.btnStart.Text = "Start";
+            this.btnStart.Text = "Старт";
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // btnShips
+            // 
+            this.btnShips.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnShips.Location = new System.Drawing.Point(12, 113);
+            this.btnShips.Name = "btnShips";
+            this.btnShips.Size = new System.Drawing.Size(399, 95);
+            this.btnShips.TabIndex = 1;
+            this.btnShips.Text = "Корабли";
+            this.btnShips.UseVisualStyleBackColor = true;
+            this.btnShips.Click += new System.EventHandler(this.btnShips_Click);
             // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(350, 98);
+            this.ClientSize = new System.Drawing.Size(427, 225);
+            this.Controls.Add(this.btnShips);
             this.Controls.Add(this.btnStart);
             this.Name = "MenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -61,6 +71,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Button btnShips;
     }
 }
 

@@ -23,5 +23,11 @@ namespace SeaBattle
             Form form = new User1Form();
             form.Show();
         }
+
+        private void btnShips_Click(object sender, EventArgs e)
+        {
+            Form form = new ShipsForm();
+            form.ShowDialog();
+        }
     }
 }
