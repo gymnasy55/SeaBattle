@@ -43,6 +43,7 @@ namespace SeaBattle
                         TextAlign = ContentAlignment.MiddleCenter,
                         Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold),
                         Name = Fields.field1.cells[i, j].Name,
+                        Anchor = Fields.field1.cells[i, j].Anchor,
                         Text = "",
                         Enabled = false
                     };
@@ -71,6 +72,7 @@ namespace SeaBattle
                         TextAlign = ContentAlignment.MiddleCenter,
                         Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold),
                         Name = Fields.field2.cells[i, j].Name,
+                        Anchor = Fields.field2.cells[i, j].Anchor,
                         Text = ""
                     };
                     UserField2.cells[i, j].MouseEnter += new EventHandler(Label_MouseEnter);
@@ -110,7 +112,7 @@ namespace SeaBattle
         private void User_Click(object sender, EventArgs e)
         {
             Label cell = (Label)sender;
-            if(cell.Name == "X")
+            if(cell.Anchor == AnchorStyles.Bottom)
             {
                 cell.Text = "X";
                 cell.ForeColor = Color.Red;

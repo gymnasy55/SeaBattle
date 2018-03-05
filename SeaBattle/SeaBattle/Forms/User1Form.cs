@@ -35,7 +35,7 @@ namespace SeaBattle
                         TextAlign = ContentAlignment.MiddleCenter,
                         BorderStyle = BorderStyle.FixedSingle,
                         Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold),
-                        Name = "",
+                        Name = ((i+1) * (j+1)).ToString(),
                         Anchor = AnchorStyles.None
                     };
                     Fields.field1.cells[i, j].MouseEnter += new EventHandler(Label_MouseEnter);
@@ -64,26 +64,27 @@ namespace SeaBattle
         private void Label_MouseClick(object sender, EventArgs e)
         {
             Label label = (Label)sender;
-            if(label.Name == "X")
+            if(label.Anchor == AnchorStyles.Bottom)
             {
                 label.Text = String.Empty;
-                label.Name = "";
+                label.Anchor = AnchorStyles.None;
             }
             else
             {
                 label.Text = "X";
-                label.Name = "X";
+                label.Anchor = AnchorStyles.Bottom;
             }
+            Point point = new Point();
+            point.X = label.Location.X;
+            point.Y = label.Location.Y;
+            Functions.Message("Координаты центра: " + point.X + " " + point.Y + "\n" + "Номер: " + label.Name);
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            for(int i = 0; i < Data.FieldWidth; i++)
+            foreach(var item in Fields.field1.cells)
             {
-                for(int j = 0; j < Data.FieldWidth; j++)
-                {
-                    if(Fields.field1.cells[i,j].Name == "X") { Fields.field1.Count++; }
-                }
+                if(item.Anchor == AnchorStyles.Bottom) { Fields.field1.Count++; }
             }
             if(Fields.field1.Count == 0)
             {

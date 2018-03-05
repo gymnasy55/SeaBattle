@@ -34,7 +34,9 @@ namespace SeaBattle
                         Height = Data.CellWidth,
                         TextAlign = ContentAlignment.MiddleCenter,
                         BorderStyle = BorderStyle.FixedSingle,
-                        Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold)
+                        Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold),
+                        Name = "",
+                        Anchor = AnchorStyles.None
                     };
                     Fields.field2.cells[i, j].MouseEnter += new EventHandler(Label_MouseEnter);
                     Fields.field2.cells[i, j].MouseLeave += new EventHandler(Label_MouseLeave);
@@ -62,15 +64,15 @@ namespace SeaBattle
         private void Label_MouseClick(object sender, EventArgs e)
         {
             Label label = (Label)sender;
-            if (label.Name == "X")
+            if (label.Anchor == AnchorStyles.Bottom)
             {
                 label.Text = String.Empty;
-                label.Name = "";
+                label.Anchor = AnchorStyles.None;
             }
             else
             {
                 label.Text = "X";
-                label.Name = "X";
+                label.Anchor = AnchorStyles.Bottom;
             }
         }
 
@@ -80,7 +82,7 @@ namespace SeaBattle
             {
                 for (int j = 0; j < Data.FieldWidth; j++)
                 {
-                    if (Fields.field2.cells[i, j].Name == "X") { Fields.field2.Count++; }
+                    if (Fields.field2.cells[i, j].Anchor == AnchorStyles.Bottom) { Fields.field2.Count++; }
                 }
             }
             if (Fields.field2.Count == 0)
