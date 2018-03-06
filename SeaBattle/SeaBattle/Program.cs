@@ -30,8 +30,7 @@ namespace SeaBattle
     {
         public static void GetNum(int num)
         {
-            
-        }
+        }   
 
         public static void Message(string message)
         {
