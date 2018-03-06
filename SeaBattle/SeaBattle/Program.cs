@@ -29,29 +29,32 @@ namespace SeaBattle
 
     public class Functions
     {
-        public static void Label_MouseClick(object sender, EventArgs e)
+        public static void unavaible(int X, int Y, int q=1)
         {
-            Label label = (Label)sender;
-            Point point = new Point();
-            point.X = label.Location.X;
-            point.Y = label.Location.Y;
-            point.X = Convert.ToInt32(Math.Truncate((point.X - 13) / Convert.ToDouble(Data.CellWidth)));
-            point.Y = Convert.ToInt32(Math.Truncate((point.Y - 42) / Convert.ToDouble(Data.CellWidth)));
-            Functions.GetNum(point.X, point.Y);
-            //Functions.Message("Координаты центра: " + point.X + " " + point.Y + "\n" + "Номер: " + label.Name);
-        }
-
-        public static void unavaible(int X, int Y)
-        {
-            Fields.field1.cells[X, Y].MouseClick -= Label_MouseClick;
-            if (X > 0) { Fields.field1.cells[X-1, Y].MouseClick -= Label_MouseClick; Fields.field1.cells[X - 1, Y].Name = "0"; }
-            if (Y > 0) { Fields.field1.cells[X, Y-1].MouseClick -= Label_MouseClick; Fields.field1.cells[X, Y - 1].Name = "0"; }
-            if ((X > 0) && (Y > 0)) { Fields.field1.cells[X-1, Y-1].MouseClick -= Label_MouseClick; Fields.field1.cells[X - 1, Y - 1].Name = "0"; }
-            if (Y < 9) { Fields.field1.cells[X, Y+1].MouseClick -= Label_MouseClick; Fields.field1.cells[X, Y + 1].Name = "0"; }
-            if (X < 9) { Fields.field1.cells[X+1, Y].MouseClick -= Label_MouseClick; Fields.field1.cells[X + 1, Y].Name = "0"; }
-            if ((X < 9)&&(Y < 9)) { Fields.field1.cells[X+1, Y+1].MouseClick -= Label_MouseClick; Fields.field1.cells[X + 1, Y + 1].Name = "0"; }
-            if ((X < 9) && (Y > 0)) { Fields.field1.cells[X + 1, Y - 1].MouseClick -= Label_MouseClick; Fields.field1.cells[X + 1, Y - 1].Name = "0"; }
-            if ((X > 0) && (Y < 9)) { Fields.field1.cells[X - 1, Y + 1].MouseClick -= Label_MouseClick; Fields.field1.cells[X - 1, Y + 1].Name = "0"; }
+            if (q == 1)
+            {
+                Fields.field1.cells[X, Y].MouseClick -= User1Form.Label_MouseClick;
+                if (X > 0) { Fields.field1.cells[X - 1, Y].MouseClick -= User1Form.Label_MouseClick; Fields.field1.cells[X - 1, Y].Name = "0"; }
+                if (Y > 0) { Fields.field1.cells[X, Y - 1].MouseClick -= User1Form.Label_MouseClick; Fields.field1.cells[X, Y - 1].Name = "0"; }
+                if ((X > 0) && (Y > 0)) { Fields.field1.cells[X - 1, Y - 1].MouseClick -= User1Form.Label_MouseClick; Fields.field1.cells[X - 1, Y - 1].Name = "0"; }
+                if (Y < 9) { Fields.field1.cells[X, Y + 1].MouseClick -= User1Form.Label_MouseClick; Fields.field1.cells[X, Y + 1].Name = "0"; }
+                if (X < 9) { Fields.field1.cells[X + 1, Y].MouseClick -= User1Form.Label_MouseClick; Fields.field1.cells[X + 1, Y].Name = "0"; }
+                if ((X < 9) && (Y < 9)) { Fields.field1.cells[X + 1, Y + 1].MouseClick -= User1Form.Label_MouseClick; Fields.field1.cells[X + 1, Y + 1].Name = "0"; }
+                if ((X < 9) && (Y > 0)) { Fields.field1.cells[X + 1, Y - 1].MouseClick -= User1Form.Label_MouseClick; Fields.field1.cells[X + 1, Y - 1].Name = "0"; }
+                if ((X > 0) && (Y < 9)) { Fields.field1.cells[X - 1, Y + 1].MouseClick -= User1Form.Label_MouseClick; Fields.field1.cells[X - 1, Y + 1].Name = "0"; }
+            }
+            else
+            {
+                Fields.field2.cells[X, Y].MouseClick -= User2Form.Label_MouseClick;
+                if (X > 0) { Fields.field2.cells[X - 1, Y].MouseClick -= User2Form.Label_MouseClick; Fields.field2.cells[X - 1, Y].Name = "0"; }
+                if (Y > 0) { Fields.field2.cells[X, Y - 1].MouseClick -= User2Form.Label_MouseClick; Fields.field2.cells[X, Y - 1].Name = "0"; }
+                if ((X > 0) && (Y > 0)) { Fields.field2.cells[X - 1, Y - 1].MouseClick -= User2Form.Label_MouseClick; Fields.field2.cells[X - 1, Y - 1].Name = "0"; }
+                if (Y < 9) { Fields.field2.cells[X, Y + 1].MouseClick -= User2Form.Label_MouseClick; Fields.field2.cells[X, Y + 1].Name = "0"; }
+                if (X < 9) { Fields.field2.cells[X + 1, Y].MouseClick -= User2Form.Label_MouseClick; Fields.field2.cells[X + 1, Y].Name = "0"; }
+                if ((X < 9) && (Y < 9)) { Fields.field2.cells[X + 1, Y + 1].MouseClick -= User2Form.Label_MouseClick; Fields.field2.cells[X + 1, Y + 1].Name = "0"; }
+                if ((X < 9) && (Y > 0)) { Fields.field2.cells[X + 1, Y - 1].MouseClick -= User2Form.Label_MouseClick; Fields.field2.cells[X + 1, Y - 1].Name = "0"; }
+                if ((X > 0) && (Y < 9)) { Fields.field2.cells[X - 1, Y + 1].MouseClick -= User2Form.Label_MouseClick; Fields.field2.cells[X - 1, Y + 1].Name = "0"; }
+            }
         }
         public static void GetNum(int Y, int X)
         {
@@ -196,25 +199,141 @@ namespace SeaBattle
                     }
                     break;
                 case 21:
-                    //code
+                    Fields.field2.cells[X, Y].Anchor = AnchorStyles.Bottom;
+                    Fields.field2.cells[X, Y].Text = "X";
+                    unavaible(X, Y, 2);
                     break;
                 case 221:
-                    //code
+                    try
+                    {
+                        if (Fields.field2.cells[X, Y + 1].Name != "0")
+                        {
+                            Fields.field2.cells[X, Y].Anchor = AnchorStyles.Bottom;
+                            Fields.field2.cells[X, Y + 1].Anchor = AnchorStyles.Bottom;
+                            Fields.field2.cells[X, Y].Text = "X";
+                            Fields.field2.cells[X, Y + 1].Text = "X";
+                            unavaible(X, Y, 2);
+                            unavaible(X, Y + 1, 2);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
                     break;
                 case 222:
-                    //code
+                    try
+                    {
+                        if (Fields.field2.cells[X + 1, Y].Name != "0")
+                        {
+                            Fields.field2.cells[X, Y].Anchor = AnchorStyles.Bottom;
+                            Fields.field2.cells[X + 1, Y].Anchor = AnchorStyles.Bottom;
+                            Fields.field2.cells[X, Y].Text = "X";
+                            Fields.field2.cells[X + 1, Y].Text = "X";
+                            unavaible(X, Y, 2);
+                            unavaible(X + 1, Y, 2);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
                     break;
                 case 231:
-                    //code
+                    try
+                    {
+                        if ((Fields.field2.cells[X, Y + 1].Name != "0") &&
+                           (Fields.field2.cells[X, Y + 2].Name != "0"))
+                        {
+                            Fields.field2.cells[X, Y].Anchor = AnchorStyles.Bottom;
+                            Fields.field2.cells[X, Y + 1].Anchor = AnchorStyles.Bottom;
+                            Fields.field2.cells[X, Y + 2].Anchor = AnchorStyles.Bottom;
+                            Fields.field2.cells[X, Y].Text = "X";
+                            Fields.field2.cells[X, Y + 1].Text = "X";
+                            Fields.field2.cells[X, Y + 2].Text = "X";
+                            unavaible(X, Y, 2);
+                            unavaible(X, Y + 1, 2);
+                            unavaible(X, Y + 2, 2);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
                     break;
                 case 232:
-                    //code
+                    try
+                    {
+                        if ((Fields.field2.cells[X + 1, Y].Name != "0") &&
+                           (Fields.field2.cells[X + 2, Y].Name != "0"))
+                        {
+                            Fields.field2.cells[X, Y].Anchor = AnchorStyles.Bottom;
+                            Fields.field2.cells[X + 1, Y].Anchor = AnchorStyles.Bottom;
+                            Fields.field2.cells[X + 2, Y].Anchor = AnchorStyles.Bottom;
+                            Fields.field2.cells[X, Y].Text = "X";
+                            Fields.field2.cells[X + 1, Y].Text = "X";
+                            Fields.field2.cells[X + 2, Y].Text = "X";
+                            unavaible(X, Y, 2);
+                            unavaible(X + 1, Y, 2);
+                            unavaible(X + 2, Y, 2);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
                     break;
                 case 241:
-                    //code
+                    try
+                    {
+                        if ((Fields.field2.cells[X, Y + 1].Name != "0") &&
+                           (Fields.field2.cells[X, Y + 2].Name != "0") &&
+                           (Fields.field2.cells[X, Y + 3].Name != "0"))
+                        {
+                            Fields.field2.cells[X, Y].Anchor = AnchorStyles.Bottom;
+                            Fields.field2.cells[X, Y + 1].Anchor = AnchorStyles.Bottom;
+                            Fields.field2.cells[X, Y + 2].Anchor = AnchorStyles.Bottom;
+                            Fields.field2.cells[X, Y + 3].Anchor = AnchorStyles.Bottom;
+                            Fields.field2.cells[X, Y].Text = "X";
+                            Fields.field2.cells[X, Y + 1].Text = "X";
+                            Fields.field2.cells[X, Y + 2].Text = "X";
+                            Fields.field2.cells[X, Y + 3].Text = "X";
+                            unavaible(X, Y, 2);
+                            unavaible(X, Y + 1, 2);
+                            unavaible(X, Y + 2, 2);
+                            unavaible(X, Y + 3, 2);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
                     break;
                 case 242:
-                    //code
+                    try
+                    {
+                        if ((Fields.field2.cells[X + 1, Y].Name != "0") &&
+                           (Fields.field2.cells[X + 2, Y].Name != "0") &&
+                           (Fields.field2.cells[X + 3, Y].Name != "0"))
+                        {
+                            Fields.field2.cells[X, Y].Anchor = AnchorStyles.Bottom;
+                            Fields.field2.cells[X + 1, Y].Anchor = AnchorStyles.Bottom;
+                            Fields.field2.cells[X + 2, Y].Anchor = AnchorStyles.Bottom;
+                            Fields.field2.cells[X + 3, Y].Anchor = AnchorStyles.Bottom;
+                            Fields.field2.cells[X, Y].Text = "X";
+                            Fields.field2.cells[X + 1, Y].Text = "X";
+                            Fields.field2.cells[X + 2, Y].Text = "X";
+                            Fields.field2.cells[X + 3, Y].Text = "X";
+                            unavaible(X, Y, 2);
+                            unavaible(X + 1, Y, 2);
+                            unavaible(X + 2, Y, 2);
+                            unavaible(X + 3, Y, 2);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
                     break;
                 default:
                     //все остальное

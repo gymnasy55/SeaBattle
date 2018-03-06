@@ -40,7 +40,7 @@ namespace SeaBattle
                     };
                     Fields.field2.cells[i, j].MouseEnter += new EventHandler(Label_MouseEnter);
                     Fields.field2.cells[i, j].MouseLeave += new EventHandler(Label_MouseLeave);
-                    Fields.field2.cells[i, j].MouseClick += Functions.Label_MouseClick;
+                    Fields.field2.cells[i, j].MouseClick += Label_MouseClick;
                     this.Controls.Add(Fields.field2.cells[i, j]);
                     x += Data.CellWidth + 1;
                 }
@@ -61,7 +61,7 @@ namespace SeaBattle
             label.BorderStyle = BorderStyle.FixedSingle;
         }
 
-        private void Label_MouseClick(object sender, EventArgs e)
+        public static void Label_MouseClick(object sender, EventArgs e)
         {
             Label label = (Label)sender;
             Point point = new Point();
