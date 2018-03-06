@@ -47,7 +47,7 @@
             // 
             this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNext.Location = new System.Drawing.Point(12, 329);
+            this.btnNext.Location = new System.Drawing.Point(12, 327);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(311, 23);
             this.btnNext.TabIndex = 0;
@@ -155,7 +155,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "User1Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Заполните поле";
+            this.Text = "User1";
             this.Load += new System.EventHandler(this.User1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

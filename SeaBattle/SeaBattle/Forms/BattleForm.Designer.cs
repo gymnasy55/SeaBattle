@@ -85,7 +85,6 @@
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblUser);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "BattleForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BattleForm";

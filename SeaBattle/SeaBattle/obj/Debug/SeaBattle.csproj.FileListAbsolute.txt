@@ -51,3 +51,17 @@ E:\Github\SeaBattle\SeaBattle\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.Gen
 E:\Github\SeaBattle\SeaBattle\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.CoreCompileInputs.cache
 E:\Github\SeaBattle\SeaBattle\SeaBattle\SeaBattle\obj\Debug\SeaBattle.exe
 E:\Github\SeaBattle\SeaBattle\SeaBattle\SeaBattle\obj\Debug\SeaBattle.pdb
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\bin\Debug\SeaBattle.exe.config
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\bin\Debug\SeaBattle.exe
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\bin\Debug\SeaBattle.pdb
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csprojResolveAssemblyReference.cache
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.BattleForm.resources
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.MenuForm.resources
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.Properties.Resources.resources
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.ShipsForm.resources
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.User1Form.resources
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.User2Form.resources
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.GenerateResource.Cache
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.CoreCompileInputs.cache
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.exe
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.pdb

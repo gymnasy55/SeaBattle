@@ -47,7 +47,7 @@
             // 
             this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNext.Location = new System.Drawing.Point(12, 356);
+            this.btnNext.Location = new System.Drawing.Point(12, 327);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(310, 23);
             this.btnNext.TabIndex = 0;
@@ -148,13 +148,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(335, 381);
+            this.ClientSize = new System.Drawing.Size(335, 352);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnNext);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "User2Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Заполните поле";
+            this.Text = "User2";
             this.Load += new System.EventHandler(this.User2_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

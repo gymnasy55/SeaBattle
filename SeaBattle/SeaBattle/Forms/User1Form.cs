@@ -22,9 +22,9 @@ namespace SeaBattle
             this.Width = 351; this.Height = 420;
             Fields.field1.cells = new Label[Data.FieldWidth, Data.FieldWidth];
             int x = 13, y = 42;
-            for (int i = 0; i < Data.FieldWidth; i++)
+            for(int i = 0; i < Data.FieldWidth; i++)
             {
-                for (int j = 0; j < Data.FieldWidth; j++)
+                for(int j = 0; j < Data.FieldWidth; j++)
                 {
                     Fields.field1.cells[i, j] = new Label()
                     {
@@ -35,7 +35,7 @@ namespace SeaBattle
                         TextAlign = ContentAlignment.MiddleCenter,
                         BorderStyle = BorderStyle.FixedSingle,
                         Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold),
-                        Name = ((i+1)+(j+1)).ToString(),
+                        Name = "",
                         Anchor = AnchorStyles.None
                     };
                     Fields.field1.cells[i, j].MouseEnter += new EventHandler(Label_MouseEnter);
@@ -61,30 +61,31 @@ namespace SeaBattle
             label.BorderStyle = BorderStyle.FixedSingle;
         }
 
-        private void Label_MouseClick(object sender, EventArgs e)
+        public static void Label_MouseClick(object sender, EventArgs e)
         {
             Label label = (Label)sender;
-            if(label.Anchor == AnchorStyles.Bottom)
+            Point point = new Point();
+            point.X = label.Location.X;
+            point.Y = label.Location.Y;
+            point.X = Convert.ToInt32(Math.Truncate((point.X - 13) / Convert.ToDouble(Data.CellWidth)));
+            point.Y = Convert.ToInt32(Math.Truncate((point.Y - 42) / Convert.ToDouble(Data.CellWidth)));
+            if (label.Anchor == AnchorStyles.Bottom)
             {
                 label.Text = String.Empty;
                 label.Anchor = AnchorStyles.None;
             }
             else
             {
-                label.Text = "X";
+
+                //label.Text = "X";
+                Functions.GetNum(point.X, point.Y);
                 label.Anchor = AnchorStyles.Bottom;
             }
-            Point point = new Point();
-            point.X = label.Location.X;
-            point.Y = label.Location.Y;
-            point.X = Convert.ToInt32(Math.Truncate((point.X - 13) / Convert.ToDouble(Data.CellWidth))) + 1;
-            point.Y = Convert.ToInt32(Math.Truncate((point.Y - 42) / Convert.ToDouble(Data.CellWidth))) + 1;
-            Functions.Message("Координаты центра: " + point.X + " " + point.Y + "\n");
+            Functions.Message("Координаты центра: " + point.X + " " + point.Y + "\n" + "Номер: " + label.Name);
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-
             foreach(var item in Fields.field1.cells)
             {
                 if(item.Anchor == AnchorStyles.Bottom) { Fields.field1.Count++; }
@@ -103,19 +104,40 @@ namespace SeaBattle
         }
 
         #region Передача корабля
-        private void катерToolStripMenuItem_Click(object sender, EventArgs e) => Data.Mode = 11;
+        private void катерToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Data.Mod = 11;
+        }
 
-        private void горизонтальныйToolStripMenuItem_Click(object sender, EventArgs e) => Data.Mode = 121;
+        private void горизонтальныйToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Data.Mod = 121;
+        }
 
-        private void вертикальныйToolStripMenuItem_Click(object sender, EventArgs e) => Data.Mode = 122;
+        private void вертикальныйToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Data.Mod = 122;
+        }
 
-        private void горизонтальныйToolStripMenuItem1_Click(object sender, EventArgs e) => Data.Mode = 131;
+        private void горизонтальныйToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Data.Mod = 131;
+        }
 
-        private void вертикальныйToolStripMenuItem1_Click(object sender, EventArgs e) => Data.Mode = 132;
+        private void вертикальныйToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Data.Mod = 132;
+        }
 
-        private void горизонтальныйToolStripMenuItem2_Click(object sender, EventArgs e) => Data.Mode = 141;
+        private void горизонтальныйToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Data.Mod = 141;
+        }
 
-        private void вертикальныйToolStripMenuItem2_Click(object sender, EventArgs e) => Data.Mode = 142;
+        private void вертикальныйToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Data.Mod = 142;
+        }
         #endregion
     }
 }
