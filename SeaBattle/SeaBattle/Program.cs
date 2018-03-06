@@ -29,17 +29,29 @@ namespace SeaBattle
 
     public class Functions
     {
+        public static void Label_MouseClick(object sender, EventArgs e)
+        {
+            Label label = (Label)sender;
+            Point point = new Point();
+            point.X = label.Location.X;
+            point.Y = label.Location.Y;
+            point.X = Convert.ToInt32(Math.Truncate((point.X - 13) / Convert.ToDouble(Data.CellWidth)));
+            point.Y = Convert.ToInt32(Math.Truncate((point.Y - 42) / Convert.ToDouble(Data.CellWidth)));
+            Functions.GetNum(point.X, point.Y);
+            //Functions.Message("Координаты центра: " + point.X + " " + point.Y + "\n" + "Номер: " + label.Name);
+        }
+
         public static void unavaible(int X, int Y)
         {
-            Fields.field1.cells[X, Y].MouseClick -= User1Form.Label_MouseClick;
-            if (X > 0) { Fields.field1.cells[X-1, Y].MouseClick -= User1Form.Label_MouseClick; Fields.field1.cells[X - 1, Y].Name = "0"; }
-            if (Y > 0) { Fields.field1.cells[X, Y-1].MouseClick -= User1Form.Label_MouseClick; Fields.field1.cells[X, Y - 1].Name = "0"; }
-            if ((X > 0) && (Y > 0)) { Fields.field1.cells[X-1, Y-1].MouseClick -= User1Form.Label_MouseClick; Fields.field1.cells[X - 1, Y - 1].Name = "0"; }
-            if (Y < 9) { Fields.field1.cells[X, Y+1].MouseClick -= User1Form.Label_MouseClick; Fields.field1.cells[X, Y + 1].Name = "0"; }
-            if (X < 9) { Fields.field1.cells[X+1, Y].MouseClick -= User1Form.Label_MouseClick; Fields.field1.cells[X + 1, Y].Name = "0"; }
-            if ((X < 9)&&(Y < 9)) { Fields.field1.cells[X+1, Y+1].MouseClick -= User1Form.Label_MouseClick; Fields.field1.cells[X + 1, Y + 1].Name = "0"; }
-            if ((X < 9) && (Y > 0)) { Fields.field1.cells[X + 1, Y - 1].MouseClick -= User1Form.Label_MouseClick; Fields.field1.cells[X + 1, Y - 1].Name = "0"; }
-            if ((X > 0) && (Y < 9)) { Fields.field1.cells[X - 1, Y + 1].MouseClick -= User1Form.Label_MouseClick; Fields.field1.cells[X - 1, Y + 1].Name = "0"; }
+            Fields.field1.cells[X, Y].MouseClick -= Label_MouseClick;
+            if (X > 0) { Fields.field1.cells[X-1, Y].MouseClick -= Label_MouseClick; Fields.field1.cells[X - 1, Y].Name = "0"; }
+            if (Y > 0) { Fields.field1.cells[X, Y-1].MouseClick -= Label_MouseClick; Fields.field1.cells[X, Y - 1].Name = "0"; }
+            if ((X > 0) && (Y > 0)) { Fields.field1.cells[X-1, Y-1].MouseClick -= Label_MouseClick; Fields.field1.cells[X - 1, Y - 1].Name = "0"; }
+            if (Y < 9) { Fields.field1.cells[X, Y+1].MouseClick -= Label_MouseClick; Fields.field1.cells[X, Y + 1].Name = "0"; }
+            if (X < 9) { Fields.field1.cells[X+1, Y].MouseClick -= Label_MouseClick; Fields.field1.cells[X + 1, Y].Name = "0"; }
+            if ((X < 9)&&(Y < 9)) { Fields.field1.cells[X+1, Y+1].MouseClick -= Label_MouseClick; Fields.field1.cells[X + 1, Y + 1].Name = "0"; }
+            if ((X < 9) && (Y > 0)) { Fields.field1.cells[X + 1, Y - 1].MouseClick -= Label_MouseClick; Fields.field1.cells[X + 1, Y - 1].Name = "0"; }
+            if ((X > 0) && (Y < 9)) { Fields.field1.cells[X - 1, Y + 1].MouseClick -= Label_MouseClick; Fields.field1.cells[X - 1, Y + 1].Name = "0"; }
         }
         public static void GetNum(int Y, int X)
         {

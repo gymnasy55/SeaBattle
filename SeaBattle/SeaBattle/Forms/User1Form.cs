@@ -40,7 +40,7 @@ namespace SeaBattle
                     };
                     Fields.field1.cells[i, j].MouseEnter += new EventHandler(Label_MouseEnter);
                     Fields.field1.cells[i, j].MouseLeave += new EventHandler(Label_MouseLeave);
-                    Fields.field1.cells[i, j].MouseClick += Label_MouseClick;
+                    Fields.field1.cells[i, j].MouseClick += Functions.Label_MouseClick;
                     this.Controls.Add(Fields.field1.cells[i, j]);
                     x += Data.CellWidth + 1;
                 }
@@ -59,18 +59,6 @@ namespace SeaBattle
         {
             Label label = (Label)sender;
             label.BorderStyle = BorderStyle.FixedSingle;
-        }
-
-        public static void Label_MouseClick(object sender, EventArgs e)
-        {
-            Label label = (Label)sender;
-            Point point = new Point();
-            point.X = label.Location.X;
-            point.Y = label.Location.Y;
-            point.X = Convert.ToInt32(Math.Truncate((point.X - 13) / Convert.ToDouble(Data.CellWidth)));
-            point.Y = Convert.ToInt32(Math.Truncate((point.Y - 42) / Convert.ToDouble(Data.CellWidth)));
-            Functions.GetNum(point.X, point.Y);
-            //Functions.Message("Координаты центра: " + point.X + " " + point.Y + "\n" + "Номер: " + label.Name);
         }
 
         private void btnNext_Click(object sender, EventArgs e)
