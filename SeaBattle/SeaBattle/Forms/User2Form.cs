@@ -10,23 +10,23 @@ using System.Windows.Forms;
 
 namespace SeaBattle
 {
-    public partial class User1Form : Form
+    public partial class User2Form : Form
     {
-        public User1Form()
+        public User2Form()
         {
             InitializeComponent();
         }
 
-        private void User1_Load(object sender, EventArgs e)
+        private void User2_Load(object sender, EventArgs e)
         {
             this.Width = 351; this.Height = 420;
-            Fields.field1.cells = new Label[Data.FieldWidth, Data.FieldWidth];
+            Fields.field2.cells = new Label[Data.FieldWidth, Data.FieldWidth];
             int x = 13, y = 42;
-            for(int i = 0; i < Data.FieldWidth; i++)
+            for (int i = 0; i < Data.FieldWidth; i++)
             {
-                for(int j = 0; j < Data.FieldWidth; j++)
+                for (int j = 0; j < Data.FieldWidth; j++)
                 {
-                    Fields.field1.cells[i, j] = new Label()
+                    Fields.field2.cells[i, j] = new Label()
                     {
                         Top = y,
                         Left = x,
@@ -38,14 +38,14 @@ namespace SeaBattle
                         Name = "",
                         Anchor = AnchorStyles.None
                     };
-                    Fields.field1.cells[i, j].MouseEnter += new EventHandler(Label_MouseEnter);
-                    Fields.field1.cells[i, j].MouseLeave += new EventHandler(Label_MouseLeave);
-                    Fields.field1.cells[i, j].MouseClick += Label_MouseClick;
-                    this.Controls.Add(Fields.field1.cells[i, j]);
+                    Fields.field2.cells[i, j].MouseEnter += new EventHandler(Label_MouseEnter);
+                    Fields.field2.cells[i, j].MouseLeave += new EventHandler(Label_MouseLeave);
+                    Fields.field2.cells[i, j].MouseClick += Label_MouseClick;
+                    this.Controls.Add(Fields.field2.cells[i, j]);
                     x += Data.CellWidth + 1;
                 }
                 x = 13;
-                y += Data.CellWidth + 1;          
+                y += Data.CellWidth + 1;
             }
         }
 
@@ -61,7 +61,7 @@ namespace SeaBattle
             label.BorderStyle = BorderStyle.FixedSingle;
         }
 
-        public static void Label_MouseClick(object sender, EventArgs e)
+        private void Label_MouseClick(object sender, EventArgs e)
         {
             Label label = (Label)sender;
             Point point = new Point();
@@ -71,22 +71,26 @@ namespace SeaBattle
             point.Y = Convert.ToInt32(Math.Truncate((point.Y - 42) / Convert.ToDouble(Data.CellWidth)));
             Functions.GetNum(point.X, point.Y);
             //Functions.Message("Координаты центра: " + point.X + " " + point.Y + "\n" + "Номер: " + label.Name);
+
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            foreach(var item in Fields.field1.cells)
+            for (int i = 0; i < Data.FieldWidth; i++)
             {
-                if(item.Anchor == AnchorStyles.Bottom) { Fields.field1.Count++; }
+                for (int j = 0; j < Data.FieldWidth; j++)
+                {
+                    if (Fields.field2.cells[i, j].Anchor == AnchorStyles.Bottom) { Fields.field2.Count++; }
+                }
             }
-            if(Fields.field1.Count == 0)
+            if (Fields.field2.Count == 0)
             {
                 Functions.Error("Поле не может быть пустым!!!");
             }
             else
             {
                 this.Controls.Clear();
-                Form form = new User2Form();
+                Form form = new BattleForm();
                 form.Show();
                 this.Close();
             }
@@ -95,37 +99,37 @@ namespace SeaBattle
         #region Передача корабля
         private void катерToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Data.Mod = 11;
+            Data.Mod = 21;
         }
 
         private void горизонтальныйToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Data.Mod = 121;
+            Data.Mod = 221;
         }
 
         private void вертикальныйToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Data.Mod = 122;
+            Data.Mod = 222;
         }
 
         private void горизонтальныйToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Data.Mod = 131;
+            Data.Mod = 231;
         }
 
         private void вертикальныйToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Data.Mod = 132;
+            Data.Mod = 232;
         }
 
         private void горизонтальныйToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            Data.Mod = 141;
+            Data.Mod = 241;
         }
 
         private void вертикальныйToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            Data.Mod = 142;
+            Data.Mod = 242;
         }
         #endregion
     }
