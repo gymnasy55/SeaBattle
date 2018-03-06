@@ -38,6 +38,10 @@ namespace SeaBattle
                         Name = "",
                         Anchor = AnchorStyles.None
                     };
+                    Fields.field1.Amount1 = 0;
+                    Fields.field1.Amount2 = 0;
+                    Fields.field1.Amount3 = 0;
+                    Fields.field1.Amount4 = 0;
                     Fields.field1.cells[i, j].MouseEnter += new EventHandler(Label_MouseEnter);
                     Fields.field1.cells[i, j].MouseLeave += new EventHandler(Label_MouseLeave);
                     Fields.field1.cells[i, j].MouseClick += Label_MouseClick;
@@ -78,11 +82,11 @@ namespace SeaBattle
         {
             foreach(var item in Fields.field1.cells)
             {
-                if(item.Anchor == AnchorStyles.Bottom) { Fields.field1.Count++; }
+                if(item.Text == "X") { Fields.field1.Count++; }
             }
-            if(Fields.field1.Count == 0)
+            if(Fields.field1.Count != 20)
             {
-                Functions.Error("Поле не может быть пустым!!!");
+                Functions.Error("Поле не заполнено!!!");
             }
             else
             {

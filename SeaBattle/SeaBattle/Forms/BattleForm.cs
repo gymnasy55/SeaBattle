@@ -128,7 +128,7 @@ namespace SeaBattle
             }
             else
             {
-                cell.Text = "N";
+                cell.Text = "•";
                 cell.MouseClick -= User_Click;
                 if(User)
                 {

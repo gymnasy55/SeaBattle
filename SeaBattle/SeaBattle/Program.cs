@@ -32,7 +32,7 @@ namespace SeaBattle
 
     public class Functions
     {
-        public static void unavaible(int X, int Y, int q=1)
+        public static void unavaible(int X, int Y, int q = 1)
         {
             if (q == 1)
             {

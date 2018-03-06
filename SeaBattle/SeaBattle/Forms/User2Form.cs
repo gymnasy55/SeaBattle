@@ -38,6 +38,10 @@ namespace SeaBattle
                         Name = "",
                         Anchor = AnchorStyles.None
                     };
+                    Fields.field2.Amount1 = 0;
+                    Fields.field2.Amount2 = 0;
+                    Fields.field2.Amount3 = 0;
+                    Fields.field2.Amount4 = 0;
                     Fields.field2.cells[i, j].MouseEnter += new EventHandler(Label_MouseEnter);
                     Fields.field2.cells[i, j].MouseLeave += new EventHandler(Label_MouseLeave);
                     Fields.field2.cells[i, j].MouseClick += Label_MouseClick;
@@ -76,16 +80,13 @@ namespace SeaBattle
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < Data.FieldWidth; i++)
+            foreach (var item in Fields.field2.cells)
             {
-                for (int j = 0; j < Data.FieldWidth; j++)
-                {
-                    if (Fields.field2.cells[i, j].Anchor == AnchorStyles.Bottom) { Fields.field2.Count++; }
-                }
+                if (item.Text == "X") { Fields.field2.Count++; }
             }
-            if (Fields.field2.Count == 0)
+            if (Fields.field2.Count != 20)
             {
-                Functions.Error("Поле не может быть пустым!!!");
+                Functions.Error("Поле не заполнено!!!");
             }
             else
             {

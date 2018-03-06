@@ -71,8 +71,8 @@
             // катерToolStripMenuItem
             // 
             this.катерToolStripMenuItem.Name = "катерToolStripMenuItem";
-            this.катерToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.катерToolStripMenuItem.Text = "Шлюпка";
+            this.катерToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.катерToolStripMenuItem.Text = "Катер";
             this.катерToolStripMenuItem.Click += new System.EventHandler(this.катерToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
@@ -81,8 +81,8 @@
             this.горизонтальныйToolStripMenuItem,
             this.вертикальныйToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(50, 20);
-            this.toolStripMenuItem1.Text = "Катер";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(68, 20);
+            this.toolStripMenuItem1.Text = "Эсминец";
             // 
             // горизонтальныйToolStripMenuItem
             // 
@@ -127,8 +127,8 @@
             this.горизонтальныйToolStripMenuItem2,
             this.вертикальныйToolStripMenuItem2});
             this.авианосецToolStripMenuItem.Name = "авианосецToolStripMenuItem";
-            this.авианосецToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
-            this.авианосецToolStripMenuItem.Text = "Авианосец";
+            this.авианосецToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.авианосецToolStripMenuItem.Text = "Линкор";
             // 
             // горизонтальныйToolStripMenuItem2
             // 
