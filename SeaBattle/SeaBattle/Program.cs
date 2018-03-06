@@ -46,6 +46,7 @@ namespace SeaBattle
             switch(Data.Mod)
             {
                 case 11:
+                    Fields.field1.cells[X, Y].Anchor = AnchorStyles.Bottom;
                     Fields.field1.cells[X, Y].Text = "X";
                     unavaible(X, Y);
                     break;
@@ -54,6 +55,8 @@ namespace SeaBattle
                     {
                         if (Fields.field1.cells[X, Y + 1].Name != "0")
                         {
+                            Fields.field1.cells[X, Y].Anchor = AnchorStyles.Bottom;
+                            Fields.field1.cells[X, Y + 1].Anchor = AnchorStyles.Bottom;
                             Fields.field1.cells[X, Y].Text = "X";
                             Fields.field1.cells[X, Y + 1].Text = "X";
                             unavaible(X, Y);
@@ -71,6 +74,8 @@ namespace SeaBattle
                     {
                         if (Fields.field1.cells[X + 1, Y].Name != "0")
                         {
+                            Fields.field1.cells[X, Y].Anchor = AnchorStyles.Bottom;
+                            Fields.field1.cells[X + 1, Y].Anchor = AnchorStyles.Bottom;
                             Fields.field1.cells[X, Y].Text = "X";
                             Fields.field1.cells[X + 1, Y].Text = "X";
                             unavaible(X, Y);
@@ -83,10 +88,48 @@ namespace SeaBattle
                     }
                     break;
                 case 131:
-                    //code
+                    try
+                    {
+                        if ((Fields.field1.cells[X, Y + 1].Name != "0")&&
+                           (Fields.field1.cells[X, Y + 2].Name != "0"))
+                        {
+                            Fields.field1.cells[X, Y].Anchor = AnchorStyles.Bottom;
+                            Fields.field1.cells[X, Y + 1].Anchor = AnchorStyles.Bottom;
+                            Fields.field1.cells[X, Y + 2].Anchor = AnchorStyles.Bottom;
+                            Fields.field1.cells[X, Y].Text = "X";
+                            Fields.field1.cells[X, Y + 1].Text = "X";
+                            Fields.field1.cells[X, Y + 2].Text = "X";
+                            unavaible(X, Y);
+                            unavaible(X, Y + 1);
+                            unavaible(X, Y + 2);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
                     break;
                 case 132:
-                    //code
+                    try
+                    {
+                        if ((Fields.field1.cells[X + 1, Y].Name != "0") &&
+                           (Fields.field1.cells[X + 2, Y].Name != "0"))
+                        {
+                            Fields.field1.cells[X, Y].Anchor = AnchorStyles.Bottom;
+                            Fields.field1.cells[X + 1, Y].Anchor = AnchorStyles.Bottom;
+                            Fields.field1.cells[X + 2, Y].Anchor = AnchorStyles.Bottom;
+                            Fields.field1.cells[X, Y].Text = "X";
+                            Fields.field1.cells[X + 1, Y].Text = "X";
+                            Fields.field1.cells[X + 2, Y].Text = "X";
+                            unavaible(X, Y);
+                            unavaible(X + 1, Y);
+                            unavaible(X + 2, Y);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
                     break;
                 case 141:
                     //code
