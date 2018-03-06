@@ -32,6 +32,18 @@ namespace SeaBattle
 
     public class Functions
     {
+        public static void Label_MouseLeave(object sender, EventArgs e)
+        {
+            Label label = (Label)sender;
+            label.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        public static void Label_MouseEnter(object sender, EventArgs e)
+        {
+            Label label = (Label)sender;
+            label.BorderStyle = BorderStyle.Fixed3D;
+        }
+
         public static void unavaible(int X, int Y, int q = 1)
         {
             if (q == 1)
@@ -59,12 +71,13 @@ namespace SeaBattle
                 if ((X > 0) && (Y < 9)) { Fields.field2.cells[X - 1, Y + 1].MouseClick -= User2Form.Label_MouseClick; Fields.field2.cells[X - 1, Y + 1].Name = "0"; }
             }
         }
+
         public static void GetNum(int Y, int X)
         {
             switch(Data.Mod)
             {
                 case 11:
-                    if(Fields.field1.Amount1 < 4)
+                    if (Fields.field1.Amount1 < 4)
                     {
                         Fields.field1.Amount1++;
                         Fields.field1.cells[X, Y].Anchor = AnchorStyles.Bottom;
@@ -73,7 +86,7 @@ namespace SeaBattle
                     }
                     else
                     {
-                        Functions.Error("Максимальное количество шлюпок = 4!!!");
+                        Functions.Error("Максимальное количество катеров = 4!!!");
                     }
                     break;
                 case 121:
@@ -81,7 +94,7 @@ namespace SeaBattle
                     {
                         if (Fields.field1.cells[X, Y + 1].Name != "0")
                         {
-                            if(Fields.field1.Amount2 < 3)
+                            if (Fields.field1.Amount2 < 3)
                             {
                                 Fields.field1.Amount2++;
                                 Fields.field1.cells[X, Y].Anchor = AnchorStyles.Bottom;
@@ -93,11 +106,11 @@ namespace SeaBattle
                             }
                             else
                             {
-                                Functions.Error("Максимальное количество катеров = 3!!!");
+                                Functions.Error("Максимальное количество эсминцев = 3!!!");
                             }
                         }
                     }
-                    catch(Exception ex) { }
+                    catch (Exception ex) { }
                     break;
                 case 122:
                     try
@@ -116,7 +129,7 @@ namespace SeaBattle
                             }
                             else
                             {
-                                Functions.Error("Максимальное количество катеров = 3!!!");
+                                Functions.Error("Максимальное количество эсминцев = 3!!!");
                             }
                         }
                     }
@@ -197,7 +210,7 @@ namespace SeaBattle
                             }
                             else
                             {
-                                Functions.Error("Максимальное количество авианосцев = 1!!!");
+                                Functions.Error("Максимальное количество линкоров = 1!!!");
                             }
                         }
                     }
@@ -226,7 +239,7 @@ namespace SeaBattle
                             }
                             else
                             {
-                                Functions.Error("Максимальное количество авианосцев = 1!!!");
+                                Functions.Error("Максимальное количество катеров = 1!!!");
                             }
                         }
                     }
@@ -243,7 +256,7 @@ namespace SeaBattle
                     }
                     else
                     {
-                        Functions.Error("Максимальное количество шлюпок = 4!!!");
+                        Functions.Error("Максимальное количество катеров = 4!!!");
                     }
                     break;
                 case 221:
@@ -263,7 +276,7 @@ namespace SeaBattle
                             }
                             else
                             {
-                                Functions.Error("Максимальное количество катеров = 3!!!");
+                                Functions.Error("Максимальное количество эсминцев = 3!!!");
                             }
                         }
                     }
@@ -286,7 +299,7 @@ namespace SeaBattle
                             }
                             else
                             {
-                                Functions.Error("Максимальное количество катеров = 3!!!");
+                                Functions.Error("Максимальное количество эсминцев = 3!!!");
                             }
                         }
                     }
@@ -367,7 +380,7 @@ namespace SeaBattle
                             }
                             else
                             {
-                                Functions.Error("Максимальное количество авианосцев = 1!!!");
+                                Functions.Error("Максимальное количество линкоров = 1!!!");
                             }
                         }
                     }
@@ -396,13 +409,67 @@ namespace SeaBattle
                             }
                             else
                             {
-                                Functions.Error("Максимальное количество авианосцев = 1!!!");
+                                Functions.Error("Максимальное количество линкоров = 1!!!");
                             }
                         }
                     }
                     catch (Exception ex) { }
                     break;
             }
+        }
+
+        public static string Focused()
+        {
+            string text = "";
+            switch(Data.Mod)
+            {
+                case 11:
+                    text = "катер";
+                    break;
+                case 121:
+                    text = "эсминец горизонтальный";
+                    break;
+                case 122:
+                    text = "эсминец вертикальный";
+                    break;
+                case 131:
+                    text = "крейсер горизонтальный";
+                    break;
+                case 132:
+                    text = "крейсер вертикальный";
+                    break;
+                case 141:
+                    text = "линкор горизонтальный";
+                    break;
+                case 142:
+                    text = "линкор вертикальный";
+                    break;
+                case 21:
+                    text = "катер";
+                    break;
+                case 221:
+                    text = "эсминец горизонтальный";
+                    break;
+                case 222:
+                    text = "эсминец вертикальный";
+                    break;
+                case 231:
+                    text = "крейсер горизонтальный";
+                    break;
+                case 232:
+                    text = "крейсер вертикальный";
+                    break;
+                case 241:
+                    text = "линкор горизонтальный";
+                    break;
+                case 242:
+                    text = "линкор вертикальный";
+                    break;
+                default:
+                    text = "ничего";
+                    break;
+            }
+            return text;
         }
 
         public static void Message(string message)
