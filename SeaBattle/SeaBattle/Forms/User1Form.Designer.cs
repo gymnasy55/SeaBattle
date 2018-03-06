@@ -155,7 +155,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "User1Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "User1";
+            this.Text = "Расставте корабли";
             this.Load += new System.EventHandler(this.User1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

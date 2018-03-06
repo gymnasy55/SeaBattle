@@ -61,9 +61,10 @@
             this.ClientSize = new System.Drawing.Size(427, 225);
             this.Controls.Add(this.btnShips);
             this.Controls.Add(this.btnStart);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "MenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SeaBattle";
+            this.Text = "Морской Бой";
             this.ResumeLayout(false);
 
         }

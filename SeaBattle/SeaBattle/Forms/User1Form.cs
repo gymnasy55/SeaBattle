@@ -69,6 +69,7 @@ namespace SeaBattle
             point.Y = label.Location.Y;
             point.X = Convert.ToInt32(Math.Truncate((point.X - 13) / Convert.ToDouble(Data.CellWidth)));
             point.Y = Convert.ToInt32(Math.Truncate((point.Y - 42) / Convert.ToDouble(Data.CellWidth)));
+
             Functions.GetNum(point.X, point.Y);
             //Functions.Message("Координаты центра: " + point.X + " " + point.Y + "\n" + "Номер: " + label.Name);
         }

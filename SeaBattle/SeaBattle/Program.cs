@@ -18,8 +18,11 @@ namespace SeaBattle
     {
         public  Label[,] cells { get; set; }
         public int Count { get; set; }
+        public int Amount1 { get; set; }
+        public int Amount2 { get; set; }
+        public int Amount3 { get; set; }
+        public int Amount4 { get; set; }
     };
-
 
     class Fields
     {
@@ -61,282 +64,343 @@ namespace SeaBattle
             switch(Data.Mod)
             {
                 case 11:
-                    Fields.field1.cells[X, Y].Anchor = AnchorStyles.Bottom;
-                    Fields.field1.cells[X, Y].Text = "X";
-                    unavaible(X, Y);
+                    if(Fields.field1.Amount1 < 4)
+                    {
+                        Fields.field1.Amount1++;
+                        Fields.field1.cells[X, Y].Anchor = AnchorStyles.Bottom;
+                        Fields.field1.cells[X, Y].Text = "X";
+                        unavaible(X, Y);
+                    }
+                    else
+                    {
+                        Functions.Error("Максимальное количество шлюпок = 4!!!");
+                    }
                     break;
                 case 121:
                     try
                     {
                         if (Fields.field1.cells[X, Y + 1].Name != "0")
                         {
-                            Fields.field1.cells[X, Y].Anchor = AnchorStyles.Bottom;
-                            Fields.field1.cells[X, Y + 1].Anchor = AnchorStyles.Bottom;
-                            Fields.field1.cells[X, Y].Text = "X";
-                            Fields.field1.cells[X, Y + 1].Text = "X";
-                            unavaible(X, Y);
-                            unavaible(X, Y+1);
+                            if(Fields.field1.Amount2 < 3)
+                            {
+                                Fields.field1.Amount2++;
+                                Fields.field1.cells[X, Y].Anchor = AnchorStyles.Bottom;
+                                Fields.field1.cells[X, Y + 1].Anchor = AnchorStyles.Bottom;
+                                Fields.field1.cells[X, Y].Text = "X";
+                                Fields.field1.cells[X, Y + 1].Text = "X";
+                                unavaible(X, Y);
+                                unavaible(X, Y + 1);
+                            }
+                            else
+                            {
+                                Functions.Error("Максимальное количество катеров = 3!!!");
+                            }
                         }
                     }
-                    catch(Exception ex)
-                    {
-
-                    }
-                        
+                    catch(Exception ex) { }
                     break;
                 case 122:
                     try
                     {
                         if (Fields.field1.cells[X + 1, Y].Name != "0")
                         {
-                            Fields.field1.cells[X, Y].Anchor = AnchorStyles.Bottom;
-                            Fields.field1.cells[X + 1, Y].Anchor = AnchorStyles.Bottom;
-                            Fields.field1.cells[X, Y].Text = "X";
-                            Fields.field1.cells[X + 1, Y].Text = "X";
-                            unavaible(X, Y);
-                            unavaible(X + 1, Y);
+                            if (Fields.field1.Amount2 < 3)
+                            {
+                                Fields.field1.Amount2++;
+                                Fields.field1.cells[X, Y].Anchor = AnchorStyles.Bottom;
+                                Fields.field1.cells[X + 1, Y].Anchor = AnchorStyles.Bottom;
+                                Fields.field1.cells[X, Y].Text = "X";
+                                Fields.field1.cells[X + 1, Y].Text = "X";
+                                unavaible(X, Y);
+                                unavaible(X + 1, Y);
+                            }
+                            else
+                            {
+                                Functions.Error("Максимальное количество катеров = 3!!!");
+                            }
                         }
                     }
-                    catch (Exception ex)
-                    {
-
-                    }
+                    catch (Exception ex) { }
                     break;
                 case 131:
                     try
                     {
-                        if ((Fields.field1.cells[X, Y + 1].Name != "0")&&
-                           (Fields.field1.cells[X, Y + 2].Name != "0"))
+                        if ((Fields.field1.cells[X, Y + 1].Name != "0") && (Fields.field1.cells[X, Y + 2].Name != "0"))
                         {
-                            Fields.field1.cells[X, Y].Anchor = AnchorStyles.Bottom;
-                            Fields.field1.cells[X, Y + 1].Anchor = AnchorStyles.Bottom;
-                            Fields.field1.cells[X, Y + 2].Anchor = AnchorStyles.Bottom;
-                            Fields.field1.cells[X, Y].Text = "X";
-                            Fields.field1.cells[X, Y + 1].Text = "X";
-                            Fields.field1.cells[X, Y + 2].Text = "X";
-                            unavaible(X, Y);
-                            unavaible(X, Y + 1);
-                            unavaible(X, Y + 2);
+                            if (Fields.field1.Amount3 < 2)
+                            {
+                                Fields.field1.Amount3++;
+                                Fields.field1.cells[X, Y].Anchor = AnchorStyles.Bottom;
+                                Fields.field1.cells[X, Y + 1].Anchor = AnchorStyles.Bottom;
+                                Fields.field1.cells[X, Y + 2].Anchor = AnchorStyles.Bottom;
+                                Fields.field1.cells[X, Y].Text = "X";
+                                Fields.field1.cells[X, Y + 1].Text = "X";
+                                Fields.field1.cells[X, Y + 2].Text = "X";
+                                unavaible(X, Y);
+                                unavaible(X, Y + 1);
+                                unavaible(X, Y + 2);
+                            }
+                            else
+                            {
+                                Functions.Error("Максимальное количество крейсеров = 2!!!");
+                            }
                         }
                     }
-                    catch (Exception ex)
-                    {
-
-                    }
+                    catch (Exception ex) { }
                     break;
                 case 132:
                     try
                     {
-                        if ((Fields.field1.cells[X + 1, Y].Name != "0") &&
-                           (Fields.field1.cells[X + 2, Y].Name != "0"))
+                        if ((Fields.field1.cells[X + 1, Y].Name != "0") && (Fields.field1.cells[X + 2, Y].Name != "0"))
                         {
-                            Fields.field1.cells[X, Y].Anchor = AnchorStyles.Bottom;
-                            Fields.field1.cells[X + 1, Y].Anchor = AnchorStyles.Bottom;
-                            Fields.field1.cells[X + 2, Y].Anchor = AnchorStyles.Bottom;
-                            Fields.field1.cells[X, Y].Text = "X";
-                            Fields.field1.cells[X + 1, Y].Text = "X";
-                            Fields.field1.cells[X + 2, Y].Text = "X";
-                            unavaible(X, Y);
-                            unavaible(X + 1, Y);
-                            unavaible(X + 2, Y);
+                            if (Fields.field1.Amount3 < 2)
+                            {
+                                Fields.field1.Amount3++;
+                                Fields.field1.cells[X, Y].Anchor = AnchorStyles.Bottom;
+                                Fields.field1.cells[X + 1, Y].Anchor = AnchorStyles.Bottom;
+                                Fields.field1.cells[X + 2, Y].Anchor = AnchorStyles.Bottom;
+                                Fields.field1.cells[X, Y].Text = "X";
+                                Fields.field1.cells[X + 1, Y].Text = "X";
+                                Fields.field1.cells[X + 2, Y].Text = "X";
+                                unavaible(X, Y);
+                                unavaible(X + 1, Y);
+                                unavaible(X + 2, Y);
+                            }
+                            else
+                            {
+                                Functions.Error("Максимальное количество крейсеров = 2!!!");
+                            }
                         }
                     }
-                    catch (Exception ex)
-                    {
-
-                    }
+                    catch (Exception ex) { }
                     break;
                 case 141:
                     try
                     {
-                        if ((Fields.field1.cells[X, Y + 1].Name != "0") &&
-                           (Fields.field1.cells[X, Y + 2].Name != "0")&&
-                           (Fields.field1.cells[X, Y + 3].Name != "0"))
+                        if ((Fields.field1.cells[X, Y + 1].Name != "0") && (Fields.field1.cells[X, Y + 2].Name != "0") && (Fields.field1.cells[X, Y + 3].Name != "0"))
                         {
-                            Fields.field1.cells[X, Y].Anchor = AnchorStyles.Bottom;
-                            Fields.field1.cells[X, Y + 1].Anchor = AnchorStyles.Bottom;
-                            Fields.field1.cells[X, Y + 2].Anchor = AnchorStyles.Bottom;
-                            Fields.field1.cells[X, Y + 3].Anchor = AnchorStyles.Bottom;
-                            Fields.field1.cells[X, Y].Text = "X";
-                            Fields.field1.cells[X, Y + 1].Text = "X";
-                            Fields.field1.cells[X, Y + 2].Text = "X";
-                            Fields.field1.cells[X, Y + 3].Text = "X";
-                            unavaible(X, Y);
-                            unavaible(X, Y + 1);
-                            unavaible(X, Y + 2);
-                            unavaible(X, Y + 3);
+                            if (Fields.field1.Amount4 < 1)
+                            {
+                                Fields.field1.Amount4++;
+                                Fields.field1.cells[X, Y].Anchor = AnchorStyles.Bottom;
+                                Fields.field1.cells[X, Y + 1].Anchor = AnchorStyles.Bottom;
+                                Fields.field1.cells[X, Y + 2].Anchor = AnchorStyles.Bottom;
+                                Fields.field1.cells[X, Y + 3].Anchor = AnchorStyles.Bottom;
+                                Fields.field1.cells[X, Y].Text = "X";
+                                Fields.field1.cells[X, Y + 1].Text = "X";
+                                Fields.field1.cells[X, Y + 2].Text = "X";
+                                Fields.field1.cells[X, Y + 3].Text = "X";
+                                unavaible(X, Y);
+                                unavaible(X, Y + 1);
+                                unavaible(X, Y + 2);
+                                unavaible(X, Y + 3);
+                            }
+                            else
+                            {
+                                Functions.Error("Максимальное количество авианосцев = 1!!!");
+                            }
                         }
                     }
-                    catch (Exception ex)
-                    {
-
-                    }
+                    catch (Exception ex) { }
                     break;
                 case 142:
                     try
                     {
-                        if ((Fields.field1.cells[X + 1, Y].Name != "0") &&
-                           (Fields.field1.cells[X + 2, Y].Name != "0") &&
-                           (Fields.field1.cells[X + 3, Y].Name != "0"))
+                        if ((Fields.field1.cells[X + 1, Y].Name != "0") && (Fields.field1.cells[X + 2, Y].Name != "0") && (Fields.field1.cells[X + 3, Y].Name != "0"))
                         {
-                            Fields.field1.cells[X, Y].Anchor = AnchorStyles.Bottom;
-                            Fields.field1.cells[X + 1, Y].Anchor = AnchorStyles.Bottom;
-                            Fields.field1.cells[X + 2, Y].Anchor = AnchorStyles.Bottom;
-                            Fields.field1.cells[X + 3, Y].Anchor = AnchorStyles.Bottom;
-                            Fields.field1.cells[X, Y].Text = "X";
-                            Fields.field1.cells[X + 1, Y].Text = "X";
-                            Fields.field1.cells[X + 2, Y].Text = "X";
-                            Fields.field1.cells[X + 3, Y].Text = "X";
-                            unavaible(X, Y);
-                            unavaible(X + 1, Y);
-                            unavaible(X + 2, Y);
-                            unavaible(X + 3, Y);
+                            if (Fields.field1.Amount4 < 1)
+                            {
+                                Fields.field1.Amount4++;
+                                Fields.field1.cells[X, Y].Anchor = AnchorStyles.Bottom;
+                                Fields.field1.cells[X + 1, Y].Anchor = AnchorStyles.Bottom;
+                                Fields.field1.cells[X + 2, Y].Anchor = AnchorStyles.Bottom;
+                                Fields.field1.cells[X + 3, Y].Anchor = AnchorStyles.Bottom;
+                                Fields.field1.cells[X, Y].Text = "X";
+                                Fields.field1.cells[X + 1, Y].Text = "X";
+                                Fields.field1.cells[X + 2, Y].Text = "X";
+                                Fields.field1.cells[X + 3, Y].Text = "X";
+                                unavaible(X, Y);
+                                unavaible(X + 1, Y);
+                                unavaible(X + 2, Y);
+                                unavaible(X + 3, Y);
+                            }
+                            else
+                            {
+                                Functions.Error("Максимальное количество авианосцев = 1!!!");
+                            }
                         }
                     }
-                    catch (Exception ex)
-                    {
-
-                    }
+                    catch (Exception ex) { }
                     break;
+
                 case 21:
-                    Fields.field2.cells[X, Y].Anchor = AnchorStyles.Bottom;
-                    Fields.field2.cells[X, Y].Text = "X";
-                    unavaible(X, Y, 2);
+                    if (Fields.field2.Amount1 < 4)
+                    {
+                        Fields.field2.Amount1++;
+                        Fields.field2.cells[X, Y].Anchor = AnchorStyles.Bottom;
+                        Fields.field2.cells[X, Y].Text = "X";
+                        unavaible(X, Y, 2);
+                    }
+                    else
+                    {
+                        Functions.Error("Максимальное количество шлюпок = 4!!!");
+                    }
                     break;
                 case 221:
                     try
                     {
                         if (Fields.field2.cells[X, Y + 1].Name != "0")
                         {
-                            Fields.field2.cells[X, Y].Anchor = AnchorStyles.Bottom;
-                            Fields.field2.cells[X, Y + 1].Anchor = AnchorStyles.Bottom;
-                            Fields.field2.cells[X, Y].Text = "X";
-                            Fields.field2.cells[X, Y + 1].Text = "X";
-                            unavaible(X, Y, 2);
-                            unavaible(X, Y + 1, 2);
+                            if (Fields.field2.Amount2 < 3)
+                            {
+                                Fields.field2.Amount2++;
+                                Fields.field2.cells[X, Y].Anchor = AnchorStyles.Bottom;
+                                Fields.field2.cells[X, Y + 1].Anchor = AnchorStyles.Bottom;
+                                Fields.field2.cells[X, Y].Text = "X";
+                                Fields.field2.cells[X, Y + 1].Text = "X";
+                                unavaible(X, Y, 2);
+                                unavaible(X, Y + 1, 2);
+                            }
+                            else
+                            {
+                                Functions.Error("Максимальное количество катеров = 3!!!");
+                            }
                         }
                     }
-                    catch (Exception ex)
-                    {
-
-                    }
+                    catch (Exception ex) { }
                     break;
                 case 222:
                     try
                     {
                         if (Fields.field2.cells[X + 1, Y].Name != "0")
                         {
-                            Fields.field2.cells[X, Y].Anchor = AnchorStyles.Bottom;
-                            Fields.field2.cells[X + 1, Y].Anchor = AnchorStyles.Bottom;
-                            Fields.field2.cells[X, Y].Text = "X";
-                            Fields.field2.cells[X + 1, Y].Text = "X";
-                            unavaible(X, Y, 2);
-                            unavaible(X + 1, Y, 2);
+                            if (Fields.field2.Amount2 < 3)
+                            {
+                                Fields.field2.Amount2++;
+                                Fields.field2.cells[X, Y].Anchor = AnchorStyles.Bottom;
+                                Fields.field2.cells[X + 1, Y].Anchor = AnchorStyles.Bottom;
+                                Fields.field2.cells[X, Y].Text = "X";
+                                Fields.field2.cells[X + 1, Y].Text = "X";
+                                unavaible(X, Y, 2);
+                                unavaible(X + 1, Y, 2);
+                            }
+                            else
+                            {
+                                Functions.Error("Максимальное количество катеров = 3!!!");
+                            }
                         }
                     }
-                    catch (Exception ex)
-                    {
-
-                    }
+                    catch (Exception ex) { }
                     break;
                 case 231:
                     try
                     {
-                        if ((Fields.field2.cells[X, Y + 1].Name != "0") &&
-                           (Fields.field2.cells[X, Y + 2].Name != "0"))
+                        if ((Fields.field2.cells[X, Y + 1].Name != "0") && (Fields.field2.cells[X, Y + 2].Name != "0"))
                         {
-                            Fields.field2.cells[X, Y].Anchor = AnchorStyles.Bottom;
-                            Fields.field2.cells[X, Y + 1].Anchor = AnchorStyles.Bottom;
-                            Fields.field2.cells[X, Y + 2].Anchor = AnchorStyles.Bottom;
-                            Fields.field2.cells[X, Y].Text = "X";
-                            Fields.field2.cells[X, Y + 1].Text = "X";
-                            Fields.field2.cells[X, Y + 2].Text = "X";
-                            unavaible(X, Y, 2);
-                            unavaible(X, Y + 1, 2);
-                            unavaible(X, Y + 2, 2);
+                            if (Fields.field2.Amount3 < 2)
+                            {
+                                Fields.field2.Amount3++;
+                                Fields.field2.cells[X, Y].Anchor = AnchorStyles.Bottom;
+                                Fields.field2.cells[X, Y + 1].Anchor = AnchorStyles.Bottom;
+                                Fields.field2.cells[X, Y + 2].Anchor = AnchorStyles.Bottom;
+                                Fields.field2.cells[X, Y].Text = "X";
+                                Fields.field2.cells[X, Y + 1].Text = "X";
+                                Fields.field2.cells[X, Y + 2].Text = "X";
+                                unavaible(X, Y, 2);
+                                unavaible(X, Y + 1, 2);
+                                unavaible(X, Y + 2, 2);
+                            }
+                            else
+                            {
+                                Functions.Error("Максимальное количество крейсеров = 2!!!");
+                            }
                         }
                     }
-                    catch (Exception ex)
-                    {
-
-                    }
+                    catch (Exception ex) { }
                     break;
                 case 232:
                     try
                     {
-                        if ((Fields.field2.cells[X + 1, Y].Name != "0") &&
-                           (Fields.field2.cells[X + 2, Y].Name != "0"))
+                        if ((Fields.field2.cells[X + 1, Y].Name != "0") && (Fields.field2.cells[X + 2, Y].Name != "0"))
                         {
-                            Fields.field2.cells[X, Y].Anchor = AnchorStyles.Bottom;
-                            Fields.field2.cells[X + 1, Y].Anchor = AnchorStyles.Bottom;
-                            Fields.field2.cells[X + 2, Y].Anchor = AnchorStyles.Bottom;
-                            Fields.field2.cells[X, Y].Text = "X";
-                            Fields.field2.cells[X + 1, Y].Text = "X";
-                            Fields.field2.cells[X + 2, Y].Text = "X";
-                            unavaible(X, Y, 2);
-                            unavaible(X + 1, Y, 2);
-                            unavaible(X + 2, Y, 2);
+                            if (Fields.field2.Amount3 < 2)
+                            {
+                                Fields.field2.Amount3++;
+                                Fields.field2.cells[X, Y].Anchor = AnchorStyles.Bottom;
+                                Fields.field2.cells[X + 1, Y].Anchor = AnchorStyles.Bottom;
+                                Fields.field2.cells[X + 2, Y].Anchor = AnchorStyles.Bottom;
+                                Fields.field2.cells[X, Y].Text = "X";
+                                Fields.field2.cells[X + 1, Y].Text = "X";
+                                Fields.field2.cells[X + 2, Y].Text = "X";
+                                unavaible(X, Y, 2);
+                                unavaible(X + 1, Y, 2);
+                                unavaible(X + 2, Y, 2);
+                            }
+                            else
+                            {
+                                Functions.Error("Максимальное количество крейсеров = 2!!!");
+                            }
                         }
                     }
-                    catch (Exception ex)
-                    {
-
-                    }
+                    catch (Exception ex) { }
                     break;
                 case 241:
                     try
                     {
-                        if ((Fields.field2.cells[X, Y + 1].Name != "0") &&
-                           (Fields.field2.cells[X, Y + 2].Name != "0") &&
-                           (Fields.field2.cells[X, Y + 3].Name != "0"))
+                        if ((Fields.field2.cells[X, Y + 1].Name != "0") && (Fields.field2.cells[X, Y + 2].Name != "0") && (Fields.field2.cells[X, Y + 3].Name != "0"))
                         {
-                            Fields.field2.cells[X, Y].Anchor = AnchorStyles.Bottom;
-                            Fields.field2.cells[X, Y + 1].Anchor = AnchorStyles.Bottom;
-                            Fields.field2.cells[X, Y + 2].Anchor = AnchorStyles.Bottom;
-                            Fields.field2.cells[X, Y + 3].Anchor = AnchorStyles.Bottom;
-                            Fields.field2.cells[X, Y].Text = "X";
-                            Fields.field2.cells[X, Y + 1].Text = "X";
-                            Fields.field2.cells[X, Y + 2].Text = "X";
-                            Fields.field2.cells[X, Y + 3].Text = "X";
-                            unavaible(X, Y, 2);
-                            unavaible(X, Y + 1, 2);
-                            unavaible(X, Y + 2, 2);
-                            unavaible(X, Y + 3, 2);
+                            if (Fields.field2.Amount4 < 1)
+                            {
+                                Fields.field2.Amount4++;
+                                Fields.field2.cells[X, Y].Anchor = AnchorStyles.Bottom;
+                                Fields.field2.cells[X, Y + 1].Anchor = AnchorStyles.Bottom;
+                                Fields.field2.cells[X, Y + 2].Anchor = AnchorStyles.Bottom;
+                                Fields.field2.cells[X, Y + 3].Anchor = AnchorStyles.Bottom;
+                                Fields.field2.cells[X, Y].Text = "X";
+                                Fields.field2.cells[X, Y + 1].Text = "X";
+                                Fields.field2.cells[X, Y + 2].Text = "X";
+                                Fields.field2.cells[X, Y + 3].Text = "X";
+                                unavaible(X, Y, 2);
+                                unavaible(X, Y + 1, 2);
+                                unavaible(X, Y + 2, 2);
+                                unavaible(X, Y + 3, 2);
+                            }
+                            else
+                            {
+                                Functions.Error("Максимальное количество авианосцев = 1!!!");
+                            }
                         }
                     }
-                    catch (Exception ex)
-                    {
-
-                    }
+                    catch (Exception ex) { }
                     break;
                 case 242:
                     try
                     {
-                        if ((Fields.field2.cells[X + 1, Y].Name != "0") &&
-                           (Fields.field2.cells[X + 2, Y].Name != "0") &&
-                           (Fields.field2.cells[X + 3, Y].Name != "0"))
+                        if ((Fields.field2.cells[X + 1, Y].Name != "0") && (Fields.field2.cells[X + 2, Y].Name != "0") && (Fields.field2.cells[X + 3, Y].Name != "0"))
                         {
-                            Fields.field2.cells[X, Y].Anchor = AnchorStyles.Bottom;
-                            Fields.field2.cells[X + 1, Y].Anchor = AnchorStyles.Bottom;
-                            Fields.field2.cells[X + 2, Y].Anchor = AnchorStyles.Bottom;
-                            Fields.field2.cells[X + 3, Y].Anchor = AnchorStyles.Bottom;
-                            Fields.field2.cells[X, Y].Text = "X";
-                            Fields.field2.cells[X + 1, Y].Text = "X";
-                            Fields.field2.cells[X + 2, Y].Text = "X";
-                            Fields.field2.cells[X + 3, Y].Text = "X";
-                            unavaible(X, Y, 2);
-                            unavaible(X + 1, Y, 2);
-                            unavaible(X + 2, Y, 2);
-                            unavaible(X + 3, Y, 2);
+                            if (Fields.field2.Amount4 < 1)
+                            {
+                                Fields.field2.Amount4++;
+                                Fields.field2.cells[X, Y].Anchor = AnchorStyles.Bottom;
+                                Fields.field2.cells[X + 1, Y].Anchor = AnchorStyles.Bottom;
+                                Fields.field2.cells[X + 2, Y].Anchor = AnchorStyles.Bottom;
+                                Fields.field2.cells[X + 3, Y].Anchor = AnchorStyles.Bottom;
+                                Fields.field2.cells[X, Y].Text = "X";
+                                Fields.field2.cells[X + 1, Y].Text = "X";
+                                Fields.field2.cells[X + 2, Y].Text = "X";
+                                Fields.field2.cells[X + 3, Y].Text = "X";
+                                unavaible(X, Y, 2);
+                                unavaible(X + 1, Y, 2);
+                                unavaible(X + 2, Y, 2);
+                                unavaible(X + 3, Y, 2);
+                            }
+                            else
+                            {
+                                Functions.Error("Максимальное количество авианосцев = 1!!!");
+                            }
                         }
                     }
-                    catch (Exception ex)
-                    {
-
-                    }
-                    break;
-                default:
-                    //все остальное
+                    catch (Exception ex) { }
                     break;
             }
         }
