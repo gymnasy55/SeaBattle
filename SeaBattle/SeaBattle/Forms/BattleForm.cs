@@ -17,12 +17,12 @@ namespace SeaBattle
             InitializeComponent();
         }
 
-        Field UserField1 = new Field();
-        Field UserField2 = new Field();
-        bool User = true; //true - User1; false - User2
-        int count1 = 0, count2 = 0;
-        bool isWin = false;
-        int time = 0;
+        static Field UserField1 = new Field();
+        static Field UserField2 = new Field();
+        static bool User = true; //true - User1; false - User2
+        static int count1 = 0, count2 = 0;
+        static bool isWin = false;
+        static int time = 0;
 
         private void BattleForm_Load(object sender, EventArgs e)
         {
@@ -47,8 +47,8 @@ namespace SeaBattle
                         Text = "",
                         Enabled = false
                     };
-                    UserField1.cells[i, j].MouseEnter += new EventHandler(Label_MouseEnter);
-                    UserField1.cells[i, j].MouseLeave += new EventHandler(Label_MouseLeave);
+                    UserField1.cells[i, j].MouseEnter += new EventHandler(Functions.Label_MouseEnter);
+                    UserField1.cells[i, j].MouseLeave += new EventHandler(Functions.Label_MouseLeave);
                     UserField1.cells[i, j].MouseClick += User_Click;
                     this.Controls.Add(UserField1.cells[i, j]);
                     x += Data.CellWidth + 1;
@@ -75,8 +75,8 @@ namespace SeaBattle
                         Anchor = Fields.field2.cells[i, j].Anchor,
                         Text = ""
                     };
-                    UserField2.cells[i, j].MouseEnter += new EventHandler(Label_MouseEnter);
-                    UserField2.cells[i, j].MouseLeave += new EventHandler(Label_MouseLeave);
+                    UserField2.cells[i, j].MouseEnter += new EventHandler(Functions.Label_MouseEnter);
+                    UserField2.cells[i, j].MouseLeave += new EventHandler(Functions.Label_MouseLeave);
                     UserField2.cells[i, j].MouseClick += User_Click;
                     this.Controls.Add(UserField2.cells[i, j]);
                     x += Data.CellWidth + 1;
@@ -84,18 +84,6 @@ namespace SeaBattle
                 x = 401; y += Data.CellWidth + 1;
             }
             lblUser.Text = "Ход: Первый";
-        }
-
-        private void Label_MouseEnter(object sender, EventArgs e)
-        {
-            Label label = (Label)sender;
-            label.BorderStyle = BorderStyle.Fixed3D;
-        }
-
-        private void Label_MouseLeave(object sender, EventArgs e)
-        {
-            Label label = (Label)sender;
-            label.BorderStyle = BorderStyle.FixedSingle;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -109,7 +97,36 @@ namespace SeaBattle
             time++;
         }
 
-        private void User_Click(object sender, EventArgs e)
+        public static void Ship_Unavaible(int X, int Y, int q = 1)
+        {
+            if (q == 1)
+            {
+                UserField1.cells[X, Y].MouseClick -= User_Click;
+                if (X > 0) { UserField1.cells[X - 1, Y].MouseClick -= User_Click; UserField1.cells[X - 1, Y].Name = "0"; }
+                if (Y > 0) { UserField1.cells[X, Y - 1].MouseClick -= User_Click; UserField1.cells[X, Y - 1].Name = "0"; }
+                if ((X > 0) && (Y > 0)) { UserField1.cells[X - 1, Y - 1].MouseClick -= User_Click; UserField1.cells[X - 1, Y - 1].Name = "0"; }
+                if (Y < 9) { UserField1.cells[X, Y + 1].MouseClick -= User_Click; UserField1.cells[X, Y + 1].Name = "0"; }
+                if (X < 9) { UserField1.cells[X + 1, Y].MouseClick -= User_Click; UserField1.cells[X + 1, Y].Name = "0"; }
+                if ((X < 9) && (Y < 9)) { UserField1.cells[X + 1, Y + 1].MouseClick -= User_Click; UserField1.cells[X + 1, Y + 1].Name = "0"; }
+                if ((X < 9) && (Y > 0)) { UserField1.cells[X + 1, Y - 1].MouseClick -= User_Click; UserField1.cells[X + 1, Y - 1].Name = "0"; }
+                if ((X > 0) && (Y < 9)) { UserField1.cells[X - 1, Y + 1].MouseClick -= User_Click; UserField1.cells[X - 1, Y + 1].Name = "0"; }
+            }
+            else
+            {
+                UserField2.cells[X, Y].MouseClick -= User_Click;
+                if (X > 0) { UserField2.cells[X - 1, Y].MouseClick -= User_Click; UserField2.cells[X - 1, Y].Name = "0"; }
+                if (Y > 0) { UserField2.cells[X, Y - 1].MouseClick -= User_Click; UserField2.cells[X, Y - 1].Name = "0"; }
+                if ((X > 0) && (Y > 0)) { UserField2.cells[X - 1, Y - 1].MouseClick -= User_Click; UserField2.cells[X - 1, Y - 1].Name = "0"; }
+                if (Y < 9) { UserField2.cells[X, Y + 1].MouseClick -= User_Click; UserField2.cells[X, Y + 1].Name = "0"; }
+                if (X < 9) { UserField2.cells[X + 1, Y].MouseClick -= User_Click; UserField2.cells[X + 1, Y].Name = "0"; }
+                if ((X < 9) && (Y < 9)) { UserField2.cells[X + 1, Y + 1].MouseClick -= User_Click; UserField2.cells[X + 1, Y + 1].Name = "0"; }
+                if ((X < 9) && (Y > 0)) { UserField2.cells[X + 1, Y - 1].MouseClick -= User_Click; UserField2.cells[X + 1, Y - 1].Name = "0"; }
+                if ((X > 0) && (Y < 9)) { UserField2.cells[X - 1, Y + 1].MouseClick -= User_Click; UserField2.cells[X - 1, Y + 1].Name = "0"; }
+            }
+        }
+
+
+        public static void User_Click(object sender, EventArgs e)
         {
             Label cell = (Label)sender;
             if(cell.Anchor == AnchorStyles.Bottom)
