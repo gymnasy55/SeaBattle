@@ -99,26 +99,26 @@ namespace SeaBattle
             if (q == 1)
             {
                 UserField1.cells[X, Y].MouseClick -= User_Click;
-                if (X > 0) { UserField1.cells[X - 1, Y].MouseClick -= User_Click; UserField1.cells[X - 1, Y].Name = "0"; }
-                if (Y > 0) { UserField1.cells[X, Y - 1].MouseClick -= User_Click; UserField1.cells[X, Y - 1].Name = "0"; }
-                if ((X > 0) && (Y > 0)) { UserField1.cells[X - 1, Y - 1].MouseClick -= User_Click; UserField1.cells[X - 1, Y - 1].Name = "0"; }
-                if (Y < 9) { UserField1.cells[X, Y + 1].MouseClick -= User_Click; UserField1.cells[X, Y + 1].Name = "0"; }
-                if (X < 9) { UserField1.cells[X + 1, Y].MouseClick -= User_Click; UserField1.cells[X + 1, Y].Name = "0"; }
-                if ((X < 9) && (Y < 9)) { UserField1.cells[X + 1, Y + 1].MouseClick -= User_Click; UserField1.cells[X + 1, Y + 1].Name = "0"; }
-                if ((X < 9) && (Y > 0)) { UserField1.cells[X + 1, Y - 1].MouseClick -= User_Click; UserField1.cells[X + 1, Y - 1].Name = "0"; }
-                if ((X > 0) && (Y < 9)) { UserField1.cells[X - 1, Y + 1].MouseClick -= User_Click; UserField1.cells[X - 1, Y + 1].Name = "0"; }
+                if (X > 0 && UserField1.cells[X - 1, Y].Text != "X") { UserField1.cells[X - 1, Y].MouseClick -= User_Click; UserField1.cells[X - 1, Y].Name = "0"; }
+                if (Y > 0 && UserField1.cells[X, Y - 1].Text != "X") { UserField1.cells[X, Y - 1].MouseClick -= User_Click; UserField1.cells[X, Y - 1].Name = "0"; }
+                if ((X > 0 && UserField1.cells[X - 1, Y - 1].Text != "X") && (Y > 0)) { UserField1.cells[X - 1, Y - 1].MouseClick -= User_Click; UserField1.cells[X - 1, Y - 1].Name = "0"; }
+                if (Y < 9 && UserField1.cells[X, Y + 1].Text != "X") { UserField1.cells[X, Y + 1].MouseClick -= User_Click; UserField1.cells[X, Y + 1].Name = "0"; }
+                if (X < 9 && UserField1.cells[X + 1, Y].Text != "X") { UserField1.cells[X + 1, Y].MouseClick -= User_Click; UserField1.cells[X + 1, Y].Name = "0"; }
+                if ((X < 9 && UserField1.cells[X + 1, Y + 1].Text != "X") && (Y < 9)) { UserField1.cells[X + 1, Y + 1].MouseClick -= User_Click; UserField1.cells[X + 1, Y + 1].Name = "0"; }
+                if ((X < 9 && UserField1.cells[X + 1, Y - 1].Text != "X") && (Y > 0)) { UserField1.cells[X + 1, Y - 1].MouseClick -= User_Click; UserField1.cells[X + 1, Y - 1].Name = "0"; }
+                if ((X > 0 && UserField1.cells[X - 1, Y + 1].Text != "X") && (Y < 9)) { UserField1.cells[X - 1, Y + 1].MouseClick -= User_Click; UserField1.cells[X - 1, Y + 1].Name = "0"; }
             }
             else
             {
                 UserField2.cells[X, Y].MouseClick -= User_Click;
-                if (X > 0) { UserField2.cells[X - 1, Y].MouseClick -= User_Click; UserField2.cells[X - 1, Y].Name = "0"; }
-                if (Y > 0) { UserField2.cells[X, Y - 1].MouseClick -= User_Click; UserField2.cells[X, Y - 1].Name = "0"; }
-                if ((X > 0) && (Y > 0)) { UserField2.cells[X - 1, Y - 1].MouseClick -= User_Click; UserField2.cells[X - 1, Y - 1].Name = "0"; }
-                if (Y < 9) { UserField2.cells[X, Y + 1].MouseClick -= User_Click; UserField2.cells[X, Y + 1].Name = "0"; }
-                if (X < 9) { UserField2.cells[X + 1, Y].MouseClick -= User_Click; UserField2.cells[X + 1, Y].Name = "0"; }
-                if ((X < 9) && (Y < 9)) { UserField2.cells[X + 1, Y + 1].MouseClick -= User_Click; UserField2.cells[X + 1, Y + 1].Name = "0"; }
-                if ((X < 9) && (Y > 0)) { UserField2.cells[X + 1, Y - 1].MouseClick -= User_Click; UserField2.cells[X + 1, Y - 1].Name = "0"; }
-                if ((X > 0) && (Y < 9)) { UserField2.cells[X - 1, Y + 1].MouseClick -= User_Click; UserField2.cells[X - 1, Y + 1].Name = "0"; }
+                if (X > 0 && UserField1.cells[X - 1, Y].Text != "X") { UserField2.cells[X - 1, Y].MouseClick -= User_Click; UserField2.cells[X - 1, Y].Name = "0"; }
+                if (Y > 0 && UserField1.cells[X, Y - 1].Text != "X") { UserField2.cells[X, Y - 1].MouseClick -= User_Click; UserField2.cells[X, Y - 1].Name = "0"; }
+                if ((X > 0) && (Y > 0) && UserField1.cells[X - 1, Y - 1].Text != "X") { UserField2.cells[X - 1, Y - 1].MouseClick -= User_Click; UserField2.cells[X - 1, Y - 1].Name = "0"; }
+                if (Y < 9 && UserField1.cells[X, Y + 1].Text != "X") { UserField2.cells[X, Y + 1].MouseClick -= User_Click; UserField2.cells[X, Y + 1].Name = "0"; }
+                if (X < 9 && UserField1.cells[X + 1, Y].Text != "X") { UserField2.cells[X + 1, Y].MouseClick -= User_Click; UserField2.cells[X + 1, Y].Name = "0"; }
+                if ((X < 9) && (Y < 9) && UserField1.cells[X + 1, Y + 1].Text != "X") { UserField2.cells[X + 1, Y + 1].MouseClick -= User_Click; UserField2.cells[X + 1, Y + 1].Name = "0"; }
+                if ((X < 9) && (Y > 0) && UserField1.cells[X + 1, Y - 1].Text != "X") { UserField2.cells[X + 1, Y - 1].MouseClick -= User_Click; UserField2.cells[X + 1, Y - 1].Name = "0"; }
+                if ((X > 0) && (Y < 9) && UserField1.cells[X - 1, Y + 1].Text != "X") { UserField2.cells[X - 1, Y + 1].MouseClick -= User_Click; UserField2.cells[X - 1, Y + 1].Name = "0"; }
             }
         }
 
