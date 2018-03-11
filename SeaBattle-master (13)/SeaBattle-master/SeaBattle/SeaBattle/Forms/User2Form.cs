@@ -63,16 +63,11 @@ namespace SeaBattle
             point.X = Convert.ToInt32(Math.Truncate((point.X - 13) / Convert.ToDouble(Data.CellWidth)));
             point.Y = Convert.ToInt32(Math.Truncate((point.Y - 42) / Convert.ToDouble(Data.CellWidth)));
             Functions.GetNum(point.X, point.Y);
-            //Functions.Message("Координаты центра: " + point.X + " " + point.Y + "\n" + "Номер: " + label.Name);
-
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            foreach (var item in Fields.field2.cells)
-            {
-                if (item.Text == "X") { Fields.field2.Count++; }
-            }
+            foreach (var item in Fields.field2.cells) { if (item.Text == "X") { Fields.field2.Count++; } }
             if (Fields.field2.Count != 20)
             {
                 Functions.Error("Поле не заполнено!!!");

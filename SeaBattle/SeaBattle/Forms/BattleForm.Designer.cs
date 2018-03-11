@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             lblUser = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
+            btnClose = new System.Windows.Forms.Button();
             lblTime = new System.Windows.Forms.Label();
             tmTime = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
@@ -85,6 +85,7 @@
             this.Controls.Add(lblTime);
             this.Controls.Add(btnClose);
             this.Controls.Add(lblUser);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "BattleForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Морской Бой";
@@ -95,9 +96,8 @@
         }
 
         #endregion
-
-        private static System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Button btnClose;
+        private static System.Windows.Forms.Label lblUser;
         private static System.Windows.Forms.Label lblTime;
         private static System.Windows.Forms.Timer tmTime;
     }

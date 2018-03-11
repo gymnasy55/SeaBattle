@@ -86,7 +86,10 @@ namespace SeaBattle
             lblUser.Text = "Ход: Первый";
         }
 
-        private void btnClose_Click(object sender, EventArgs e) => Application.Exit();
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
         private void tmTime_Tick(object sender, EventArgs e)
         {
@@ -169,13 +172,11 @@ namespace SeaBattle
             {
                 point.X = Convert.ToInt32(Math.Truncate((point.X - 13) / Convert.ToDouble(Data.CellWidth)));
                 point.Y = Convert.ToInt32(Math.Truncate((point.Y - 13) / Convert.ToDouble(Data.CellWidth)));
-                //Functions.Message("Координаты центра: " + point.X + " " + point.Y + "\n" + "Номер: ");
             }
             else
             {
                 point.X = Convert.ToInt32(Math.Truncate((point.X - 401) / Convert.ToDouble(Data.CellWidth)));
                 point.Y = Convert.ToInt32(Math.Truncate((point.Y - 13) / Convert.ToDouble(Data.CellWidth)));
-                //Functions.Message("Координаты центра: " + point.X + " " + point.Y + "\n" + "Номер: ");
             }
             if (cell.Anchor == AnchorStyles.Bottom)
             {
@@ -190,18 +191,14 @@ namespace SeaBattle
                     foreach (var item in UserField2.cells) { item.Enabled = false; }
                 }
                 cell.MouseClick -= User_Click;
-                if ((CheckShip(point.Y, point.X, 1))&& 
-                    (CheckShip(point.Y, point.X, -1))&& 
-                    (CheckShip(point.Y, point.X, 0, 1))&& 
-                    (CheckShip(point.Y, point.X, 0, -1)))
+                if ((CheckShip(point.Y, point.X, 1)) && (CheckShip(point.Y, point.X, -1)) && (CheckShip(point.Y, point.X, 0, 1)) && (CheckShip(point.Y, point.X, 0, -1)))
                 {
                     Ship_Unavaible(point.Y, point.X);
                     CheckShip(point.Y, point.X, 1, 0, 1);
                     CheckShip(point.Y, point.X, -1, 0, 1);
                     CheckShip(point.Y, point.X, 0, 1, 1);
                     CheckShip(point.Y, point.X, 0, -1, 1);
-                }
-                
+                } 
             }
             else
             {
