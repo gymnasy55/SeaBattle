@@ -86,10 +86,7 @@ namespace SeaBattle
             lblUser.Text = "Ход: Первый";
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        private void btnClose_Click(object sender, EventArgs e) => Application.Exit();
 
         private void tmTime_Tick(object sender, EventArgs e)
         {
@@ -125,11 +122,38 @@ namespace SeaBattle
             }
         }
 
+        public void CheckShip(int Mode, int X, int Y, int goX, int goY = 0)
+        {
+            int goY1 = 1, goX1 = 1;
+            if (User) {
+                while (UserField1.cells[X + goX*goX1, Y + goY*goY1].Anchor == AnchorStyles.Bottom)
+                {
+
+                }
+            }
+            else
+            {
+
+            }
+        }
 
         public static void User_Click(object sender, EventArgs e)
         {
             Label cell = (Label)sender;
-            if(cell.Anchor == AnchorStyles.Bottom)
+            Point point = new Point();
+            point.X = cell.Location.X;
+            point.Y = cell.Location.Y;
+            if (User)
+            {
+                point.X = Convert.ToInt32(Math.Truncate((point.X - 13) / Convert.ToDouble(Data.CellWidth)));
+                point.Y = Convert.ToInt32(Math.Truncate((point.Y - 13) / Convert.ToDouble(Data.CellWidth)));
+            }
+            else
+            {
+                point.X = Convert.ToInt32(Math.Truncate((point.X - 401) / Convert.ToDouble(Data.CellWidth)));
+                point.Y = Convert.ToInt32(Math.Truncate((point.Y - 13) / Convert.ToDouble(Data.CellWidth)));
+            }
+            if (cell.Anchor == AnchorStyles.Bottom)
             {
                 cell.Text = "X";
                 cell.ForeColor = Color.Red;
@@ -142,6 +166,7 @@ namespace SeaBattle
                     foreach (var item in UserField2.cells) { item.Enabled = false; }
                 }
                 cell.MouseClick -= User_Click;
+                
             }
             else
             {
