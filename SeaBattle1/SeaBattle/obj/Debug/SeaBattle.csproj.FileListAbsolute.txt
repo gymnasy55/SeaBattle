@@ -1,0 +1,137 @@
+E:\C#\SeaBattle\SeaBattle\bin\Debug\SeaBattle.exe.config
+E:\C#\SeaBattle\SeaBattle\bin\Debug\SeaBattle.exe
+E:\C#\SeaBattle\SeaBattle\bin\Debug\SeaBattle.pdb
+E:\C#\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csprojResolveAssemblyReference.cache
+E:\C#\SeaBattle\SeaBattle\obj\Debug\SeaBattle.Properties.Resources.resources
+E:\C#\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.GenerateResource.Cache
+E:\C#\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.CoreCompileInputs.cache
+E:\C#\SeaBattle\SeaBattle\obj\Debug\SeaBattle.exe
+E:\C#\SeaBattle\SeaBattle\obj\Debug\SeaBattle.pdb
+E:\C#\SeaBattle\SeaBattle\obj\Debug\SeaBattle.MenuForm.resources
+E:\C#\SeaBattle\SeaBattle\obj\Debug\SeaBattle.User1Form.resources
+E:\C#\SeaBattle\SeaBattle\obj\Debug\SeaBattle.User2Form.resources
+E:\C#\SeaBattle\SeaBattle\obj\Debug\SeaBattle.BattleForm.resources
+C:\Users\Dima\Downloads\SeaBattle-master\SeaBattle-master\SeaBattle\SeaBattle\bin\Debug\SeaBattle.exe.config
+C:\Users\Dima\Downloads\SeaBattle-master\SeaBattle-master\SeaBattle\SeaBattle\bin\Debug\SeaBattle.exe
+C:\Users\Dima\Downloads\SeaBattle-master\SeaBattle-master\SeaBattle\SeaBattle\bin\Debug\SeaBattle.pdb
+C:\Users\Dima\Downloads\SeaBattle-master\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csprojResolveAssemblyReference.cache
+C:\Users\Dima\Downloads\SeaBattle-master\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.BattleForm.resources
+C:\Users\Dima\Downloads\SeaBattle-master\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.MenuForm.resources
+C:\Users\Dima\Downloads\SeaBattle-master\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.Properties.Resources.resources
+C:\Users\Dima\Downloads\SeaBattle-master\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.User1Form.resources
+C:\Users\Dima\Downloads\SeaBattle-master\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.User2Form.resources
+C:\Users\Dima\Downloads\SeaBattle-master\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.GenerateResource.Cache
+C:\Users\Dima\Downloads\SeaBattle-master\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.CoreCompileInputs.cache
+C:\Users\Dima\Downloads\SeaBattle-master\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.exe
+C:\Users\Dima\Downloads\SeaBattle-master\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.pdb
+C:\Users\polcr\Desktop\SeaBattle-master\SeaBattle-master\SeaBattle\SeaBattle\bin\Debug\SeaBattle.exe.config
+C:\Users\polcr\Desktop\SeaBattle-master\SeaBattle-master\SeaBattle\SeaBattle\bin\Debug\SeaBattle.exe
+C:\Users\polcr\Desktop\SeaBattle-master\SeaBattle-master\SeaBattle\SeaBattle\bin\Debug\SeaBattle.pdb
+C:\Users\polcr\Desktop\SeaBattle-master\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csprojResolveAssemblyReference.cache
+C:\Users\polcr\Desktop\SeaBattle-master\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.BattleForm.resources
+C:\Users\polcr\Desktop\SeaBattle-master\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.MenuForm.resources
+C:\Users\polcr\Desktop\SeaBattle-master\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.Properties.Resources.resources
+C:\Users\polcr\Desktop\SeaBattle-master\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.User1Form.resources
+C:\Users\polcr\Desktop\SeaBattle-master\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.User2Form.resources
+C:\Users\polcr\Desktop\SeaBattle-master\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.GenerateResource.Cache
+C:\Users\polcr\Desktop\SeaBattle-master\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.CoreCompileInputs.cache
+C:\Users\polcr\Desktop\SeaBattle-master\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.exe
+C:\Users\polcr\Desktop\SeaBattle-master\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.pdb
+E:\Github\SeaBattle\SeaBattle\SeaBattle\SeaBattle\bin\Debug\SeaBattle.exe.config
+E:\Github\SeaBattle\SeaBattle\SeaBattle\SeaBattle\bin\Debug\SeaBattle.exe
+E:\Github\SeaBattle\SeaBattle\SeaBattle\SeaBattle\bin\Debug\SeaBattle.pdb
+E:\Github\SeaBattle\SeaBattle\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csprojResolveAssemblyReference.cache
+E:\Github\SeaBattle\SeaBattle\SeaBattle\SeaBattle\obj\Debug\SeaBattle.BattleForm.resources
+E:\Github\SeaBattle\SeaBattle\SeaBattle\SeaBattle\obj\Debug\SeaBattle.MenuForm.resources
+E:\Github\SeaBattle\SeaBattle\SeaBattle\SeaBattle\obj\Debug\SeaBattle.Properties.Resources.resources
+E:\Github\SeaBattle\SeaBattle\SeaBattle\SeaBattle\obj\Debug\SeaBattle.ShipsForm.resources
+E:\Github\SeaBattle\SeaBattle\SeaBattle\SeaBattle\obj\Debug\SeaBattle.User1Form.resources
+E:\Github\SeaBattle\SeaBattle\SeaBattle\SeaBattle\obj\Debug\SeaBattle.User2Form.resources
+E:\Github\SeaBattle\SeaBattle\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.GenerateResource.Cache
+E:\Github\SeaBattle\SeaBattle\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.CoreCompileInputs.cache
+E:\Github\SeaBattle\SeaBattle\SeaBattle\SeaBattle\obj\Debug\SeaBattle.exe
+E:\Github\SeaBattle\SeaBattle\SeaBattle\SeaBattle\obj\Debug\SeaBattle.pdb
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\bin\Debug\SeaBattle.exe.config
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\bin\Debug\SeaBattle.exe
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\bin\Debug\SeaBattle.pdb
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csprojResolveAssemblyReference.cache
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.BattleForm.resources
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.MenuForm.resources
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.Properties.Resources.resources
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.ShipsForm.resources
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.User1Form.resources
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.User2Form.resources
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.GenerateResource.Cache
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.CoreCompileInputs.cache
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.exe
+C:\Users\Dima\Downloads\SeaBattle-master (8)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.pdb
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (10)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csprojResolveAssemblyReference.cache
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (10)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.BattleForm.resources
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (10)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.MenuForm.resources
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (10)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.Properties.Resources.resources
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (10)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.ShipsForm.resources
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (10)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.User1Form.resources
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (10)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.User2Form.resources
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (10)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.GenerateResource.Cache
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (10)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.CoreCompileInputs.cache
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (10)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.exe
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (10)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.pdb
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (10)\SeaBattle-master\SeaBattle\SeaBattle\bin\Debug\SeaBattle.exe.config
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (10)\SeaBattle-master\SeaBattle\SeaBattle\bin\Debug\SeaBattle.exe
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (10)\SeaBattle-master\SeaBattle\SeaBattle\bin\Debug\SeaBattle.pdb
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (11)\SeaBattle-master\SeaBattle\SeaBattle\bin\Debug\SeaBattle.exe.config
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (11)\SeaBattle-master\SeaBattle\SeaBattle\bin\Debug\SeaBattle.exe
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (11)\SeaBattle-master\SeaBattle\SeaBattle\bin\Debug\SeaBattle.pdb
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (11)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csprojResolveAssemblyReference.cache
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (11)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.BattleForm.resources
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (11)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.MenuForm.resources
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (11)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.Properties.Resources.resources
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (11)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.ShipsForm.resources
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (11)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.User1Form.resources
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (11)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.User2Form.resources
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (11)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.GenerateResource.Cache
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (11)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.CoreCompileInputs.cache
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (11)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.exe
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (11)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.pdb
+C:\Users\Dima\Downloads\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\bin\Debug\SeaBattle.exe.config
+C:\Users\Dima\Downloads\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\bin\Debug\SeaBattle.exe
+C:\Users\Dima\Downloads\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\bin\Debug\SeaBattle.pdb
+C:\Users\Dima\Downloads\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csprojResolveAssemblyReference.cache
+C:\Users\Dima\Downloads\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.BattleForm.resources
+C:\Users\Dima\Downloads\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.MenuForm.resources
+C:\Users\Dima\Downloads\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.Properties.Resources.resources
+C:\Users\Dima\Downloads\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.ShipsForm.resources
+C:\Users\Dima\Downloads\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.User1Form.resources
+C:\Users\Dima\Downloads\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.User2Form.resources
+C:\Users\Dima\Downloads\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.GenerateResource.Cache
+C:\Users\Dima\Downloads\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.CoreCompileInputs.cache
+C:\Users\Dima\Downloads\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.exe
+C:\Users\Dima\Downloads\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.pdb
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\bin\Debug\SeaBattle.exe.config
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\bin\Debug\SeaBattle.exe
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\bin\Debug\SeaBattle.pdb
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csprojResolveAssemblyReference.cache
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.BattleForm.resources
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.MenuForm.resources
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.Properties.Resources.resources
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.ShipsForm.resources
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.User1Form.resources
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.User2Form.resources
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.GenerateResource.Cache
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.CoreCompileInputs.cache
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.exe
+E:\Github\SeaBattle\SeaBattle\SeaBattle-master (13)\SeaBattle-master\SeaBattle\SeaBattle\obj\Debug\SeaBattle.pdb
+C:\Users\user\Desktop\SeaBattle\SeaBattle\bin\Debug\SeaBattle.exe.config
+C:\Users\user\Desktop\SeaBattle\SeaBattle\bin\Debug\SeaBattle.exe
+C:\Users\user\Desktop\SeaBattle\SeaBattle\bin\Debug\SeaBattle.pdb
+C:\Users\user\Desktop\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\SeaBattle\SeaBattle\obj\Debug\SeaBattle.BattleForm.resources
+C:\Users\user\Desktop\SeaBattle\SeaBattle\obj\Debug\SeaBattle.MenuForm.resources
+C:\Users\user\Desktop\SeaBattle\SeaBattle\obj\Debug\SeaBattle.Properties.Resources.resources
+C:\Users\user\Desktop\SeaBattle\SeaBattle\obj\Debug\SeaBattle.ShipsForm.resources
+C:\Users\user\Desktop\SeaBattle\SeaBattle\obj\Debug\SeaBattle.User1Form.resources
+C:\Users\user\Desktop\SeaBattle\SeaBattle\obj\Debug\SeaBattle.User2Form.resources
+C:\Users\user\Desktop\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.GenerateResource.Cache
+C:\Users\user\Desktop\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\SeaBattle\SeaBattle\obj\Debug\SeaBattle.exe
+C:\Users\user\Desktop\SeaBattle\SeaBattle\obj\Debug\SeaBattle.pdb
