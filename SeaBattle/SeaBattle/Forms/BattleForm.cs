@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SeaBattle
@@ -86,7 +80,10 @@ namespace SeaBattle
             lblUser.Text = "Ход: Первый";
         }
 
-        private void btnClose_Click(object sender, EventArgs e) => Application.Exit();
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
         private void tmTime_Tick(object sender, EventArgs e)
         {
@@ -94,47 +91,69 @@ namespace SeaBattle
             time++;
         }
 
-        public static void Ship_Unavaible(int X, int Y, int q = 1)
+        public static void Ship_Unavaible(int X, int Y)
         {
-            if (q == 1)
+            if (!User)
             {
-                UserField1.cells[X, Y].MouseClick -= User_Click;
-                if (X > 0 && UserField1.cells[X - 1, Y].Text != "X") { UserField1.cells[X - 1, Y].MouseClick -= User_Click; UserField1.cells[X - 1, Y].Name = "0"; }
-                if (Y > 0 && UserField1.cells[X, Y - 1].Text != "X") { UserField1.cells[X, Y - 1].MouseClick -= User_Click; UserField1.cells[X, Y - 1].Name = "0"; }
-                if ((X > 0 && UserField1.cells[X - 1, Y - 1].Text != "X") && (Y > 0)) { UserField1.cells[X - 1, Y - 1].MouseClick -= User_Click; UserField1.cells[X - 1, Y - 1].Name = "0"; }
-                if (Y < 9 && UserField1.cells[X, Y + 1].Text != "X") { UserField1.cells[X, Y + 1].MouseClick -= User_Click; UserField1.cells[X, Y + 1].Name = "0"; }
-                if (X < 9 && UserField1.cells[X + 1, Y].Text != "X") { UserField1.cells[X + 1, Y].MouseClick -= User_Click; UserField1.cells[X + 1, Y].Name = "0"; }
-                if ((X < 9 && UserField1.cells[X + 1, Y + 1].Text != "X") && (Y < 9)) { UserField1.cells[X + 1, Y + 1].MouseClick -= User_Click; UserField1.cells[X + 1, Y + 1].Name = "0"; }
-                if ((X < 9 && UserField1.cells[X + 1, Y - 1].Text != "X") && (Y > 0)) { UserField1.cells[X + 1, Y - 1].MouseClick -= User_Click; UserField1.cells[X + 1, Y - 1].Name = "0"; }
-                if ((X > 0 && UserField1.cells[X - 1, Y + 1].Text != "X") && (Y < 9)) { UserField1.cells[X - 1, Y + 1].MouseClick -= User_Click; UserField1.cells[X - 1, Y + 1].Name = "0"; }
+                if (X > 0 && UserField1.cells[X - 1, Y].Text != "X") { UserField1.cells[X - 1, Y].MouseClick -= User_Click; UserField1.cells[X - 1, Y].Text = "•"; }
+                if (Y > 0 && UserField1.cells[X, Y - 1].Text != "X") { UserField1.cells[X, Y - 1].MouseClick -= User_Click; UserField1.cells[X, Y - 1].Text = "•"; }
+                if ((X > 0 && (Y > 0) && UserField1.cells[X - 1, Y - 1].Text != "X") ) { UserField1.cells[X - 1, Y - 1].MouseClick -= User_Click; UserField1.cells[X - 1, Y - 1].Text = "•"; }
+                if (Y < 9 && UserField1.cells[X, Y + 1].Text != "X") { UserField1.cells[X, Y + 1].MouseClick -= User_Click; UserField1.cells[X, Y + 1].Text = "•"; }
+                if (X < 9 && UserField1.cells[X + 1, Y].Text != "X") { UserField1.cells[X + 1, Y].MouseClick -= User_Click; UserField1.cells[X + 1, Y].Text = "•"; }
+                if ((X < 9 && (Y < 9) && (UserField1.cells[X + 1, Y + 1].Text != "X"))) { UserField1.cells[X + 1, Y + 1].MouseClick -= User_Click; UserField1.cells[X + 1, Y + 1].Text = "•"; }
+                if ((X < 9 && (Y > 0) && UserField1.cells[X + 1, Y - 1].Text != "X") ) { UserField1.cells[X + 1, Y - 1].MouseClick -= User_Click; UserField1.cells[X + 1, Y - 1].Text = "•"; }
+                if ((X > 0 && (Y < 9) && UserField1.cells[X - 1, Y + 1].Text != "X") ) { UserField1.cells[X - 1, Y + 1].MouseClick -= User_Click; UserField1.cells[X - 1, Y + 1].Text = "•"; }
             }
             else
-            {
-                UserField2.cells[X, Y].MouseClick -= User_Click;
-                if (X > 0 && UserField2.cells[X - 1, Y].Text != "X") { UserField2.cells[X - 1, Y].MouseClick -= User_Click; UserField2.cells[X - 1, Y].Name = "0"; }
-                if (Y > 0 && UserField2.cells[X, Y - 1].Text != "X") { UserField2.cells[X, Y - 1].MouseClick -= User_Click; UserField2.cells[X, Y - 1].Name = "0"; }
-                if ((X > 0) && (Y > 0) && UserField2.cells[X - 1, Y - 1].Text != "X") { UserField2.cells[X - 1, Y - 1].MouseClick -= User_Click; UserField2.cells[X - 1, Y - 1].Name = "0"; }
-                if (Y < 9 && UserField2.cells[X, Y + 1].Text != "X") { UserField2.cells[X, Y + 1].MouseClick -= User_Click; UserField2.cells[X, Y + 1].Name = "0"; }
-                if (X < 9 && UserField2.cells[X + 1, Y].Text != "X") { UserField2.cells[X + 1, Y].MouseClick -= User_Click; UserField2.cells[X + 1, Y].Name = "0"; }
-                if ((X < 9) && (Y < 9) && UserField2.cells[X + 1, Y + 1].Text != "X") { UserField2.cells[X + 1, Y + 1].MouseClick -= User_Click; UserField2.cells[X + 1, Y + 1].Name = "0"; }
-                if ((X < 9) && (Y > 0) && UserField2.cells[X + 1, Y - 1].Text != "X") { UserField2.cells[X + 1, Y - 1].MouseClick -= User_Click; UserField2.cells[X + 1, Y - 1].Name = "0"; }
-                if ((X > 0) && (Y < 9) && UserField2.cells[X - 1, Y + 1].Text != "X") { UserField2.cells[X - 1, Y + 1].MouseClick -= User_Click; UserField2.cells[X - 1, Y + 1].Name = "0"; }
+            { 
+                if (X > 0 && UserField2.cells[X - 1, Y].Text != "X") { UserField2.cells[X - 1, Y].MouseClick -= User_Click; UserField2.cells[X - 1, Y].Text = "•"; }
+                if (Y > 0 && UserField2.cells[X, Y - 1].Text != "X") { UserField2.cells[X, Y - 1].MouseClick -= User_Click; UserField2.cells[X, Y - 1].Text = "•"; }
+                if ((X > 0) && (Y > 0) && UserField2.cells[X - 1, Y - 1].Text != "X") { UserField2.cells[X - 1, Y - 1].MouseClick -= User_Click; UserField2.cells[X - 1, Y - 1].Text = "•"; }
+                if (Y < 9 && UserField2.cells[X, Y + 1].Text != "X") { UserField2.cells[X, Y + 1].MouseClick -= User_Click; UserField2.cells[X, Y + 1].Text = "•"; }
+                if (X < 9 && UserField2.cells[X + 1, Y].Text != "X") { UserField2.cells[X + 1, Y].MouseClick -= User_Click; UserField2.cells[X + 1, Y].Text = "•"; }
+                if ((X < 9) && (Y < 9) && UserField2.cells[X + 1, Y + 1].Text != "X") { UserField2.cells[X + 1, Y + 1].MouseClick -= User_Click; UserField2.cells[X + 1, Y + 1].Text = "•"; }
+                if ((X < 9) && (Y > 0) && UserField2.cells[X + 1, Y - 1].Text != "X") { UserField2.cells[X + 1, Y - 1].MouseClick -= User_Click; UserField2.cells[X + 1, Y - 1].Text = "•"; }
+                if ((X > 0) && (Y < 9) && UserField2.cells[X - 1, Y + 1].Text != "X") { UserField2.cells[X - 1, Y + 1].MouseClick -= User_Click; UserField2.cells[X - 1, Y + 1].Text = "•"; }
             }
         }
 
-        public void CheckShip(int Mode, int X, int Y, int goX, int goY = 0)
+        public static bool CheckShip(int X, int Y, int goX, int goY = 0, int Mode = 0)
         {
+            bool isTrue = true;
             int goY1 = 1, goX1 = 1;
-            if (User) {
-                while (UserField1.cells[X + goX*goX1, Y + goY*goY1].Anchor == AnchorStyles.Bottom)
+            if (!User)
+            {
+                try
+                { 
+                    while (UserField1.cells[X + goX * goX1, Y + goY * goY1].Anchor == AnchorStyles.Bottom)
+                    {
+                        if ((UserField1.cells[X + goX * goX1, Y + goY * goY1].Text != "X") && (UserField1.cells[X + goX * goX1, Y + goY * goY1].Anchor == AnchorStyles.Bottom)) { isTrue = false; }
+                        if (Mode == 1) { Ship_Unavaible(X + goX * goX1, Y + goY * goY1); }
+                        goY1++; goX1++;
+                    }
+                }
+                catch (Exception ex)
                 {
-
+                    return isTrue;
                 }
             }
             else
             {
-
+                try
+                {
+                    while (UserField2.cells[X + goX * goX1, Y + goY * goY1].Anchor == AnchorStyles.Bottom)
+                    {
+                        if ((UserField2.cells[X + goX * goX1, Y + goY * goY1].Text != "X") && (UserField2.cells[X + goX * goX1, Y + goY * goY1].Anchor == AnchorStyles.Bottom)) { isTrue = false; }
+                        if (Mode == 1) { Ship_Unavaible(X + goX * goX1, Y + goY * goY1); }
+                        goY1++; goX1++;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return isTrue;
+                }
             }
+            return isTrue;
         }
 
         public static void User_Click(object sender, EventArgs e)
@@ -143,7 +162,7 @@ namespace SeaBattle
             Point point = new Point();
             point.X = cell.Location.X;
             point.Y = cell.Location.Y;
-            if (User)
+            if (!User)
             {
                 point.X = Convert.ToInt32(Math.Truncate((point.X - 13) / Convert.ToDouble(Data.CellWidth)));
                 point.Y = Convert.ToInt32(Math.Truncate((point.Y - 13) / Convert.ToDouble(Data.CellWidth)));
@@ -166,7 +185,14 @@ namespace SeaBattle
                     foreach (var item in UserField2.cells) { item.Enabled = false; }
                 }
                 cell.MouseClick -= User_Click;
-                
+                if ((CheckShip(point.Y, point.X, 1)) && (CheckShip(point.Y, point.X, -1)) && (CheckShip(point.Y, point.X, 0, 1)) && (CheckShip(point.Y, point.X, 0, -1)))
+                {
+                    Ship_Unavaible(point.Y, point.X);
+                    CheckShip(point.Y, point.X, 1, 0, 1);
+                    CheckShip(point.Y, point.X, -1, 0, 1);
+                    CheckShip(point.Y, point.X, 0, 1, 1);
+                    CheckShip(point.Y, point.X, 0, -1, 1);
+                } 
             }
             else
             {
