@@ -1,2 +1,2 @@
 # SeaBattle
-It's out project "SeaBattle".
+It's our project "SeaBattle".
