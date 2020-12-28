@@ -93,7 +93,7 @@ namespace SeaBattle
 
         public static void Ship_Unavaible(int X, int Y)
         {
-            if (!User)
+            if (!User) // Отбор прав
             {
                 if (X > 0 && UserField1.cells[X - 1, Y].Text != "X") { UserField1.cells[X - 1, Y].MouseClick -= User_Click; UserField1.cells[X - 1, Y].Text = "•"; }
                 if (Y > 0 && UserField1.cells[X, Y - 1].Text != "X") { UserField1.cells[X, Y - 1].MouseClick -= User_Click; UserField1.cells[X, Y - 1].Text = "•"; }
